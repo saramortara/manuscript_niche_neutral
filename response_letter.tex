@@ -1,0 +1,185 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Response Letter}
+
+\author{}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%01-Nov-2017
+
+%Tailoring species abundance distributions with trait-environment correlations
+%JEcol-2017-0590
+
+%A copy of this letter can also be viewed in your author centre
+%at https://mc.manuscriptcentral.com/jecol-besjournals
+
+
+
+%Dear Ms. Mortara,
+
+
+%Thank you for submitting this paper to Journal of Ecology. I have now received referees reports, copies of which are included below. I have also discussed the paper with Caroline Brophy, the Associate Editor responsible, whose assessment is below, and with David Gibson, one of Journal of Ecology's Editors.
+%As you can see, while the referees and Editors are positive about the study and feel the work presented here has considerable potential, they also express significant doubts about the current presentation. To address these comments fully would result in a much-altered paper and additional outside review will be needed. In these circumstances it is our policy to reject the current version of the manuscript but to invite resubmission to Journal of Ecology once you have resolved the problems identified.
+%We hope that you will consider resubmitting a new version of this work to Journal of Ecology and would be grateful if you will let us know whether you intend to do so. If you do wish to re-submit, you should do this using our website within four months of the above date. Please be aware that our policy is to treat resubmissions as new manuscripts in the sense that they will go through a further stage of peer review, possibly by the same reviewers as used for the original submission, and that there is no commitment from us as to eventual acceptability.  I am sorry that I am unable to be more positive at this stage, but we hope that you can use the comments and advice given below to produce an improved submission that may reach an acceptable standard.
+%Once you have revised your manuscript, go to http://mc.manuscriptcentral.com/jecol-besjournals and login to your Author Center. Click on "Manuscripts with Decisions" and click on "Create a Resubmission" located next to the manuscript number, and then follow the steps for resubmitting your manuscript. Please upload a word processor file, which will be converted to a pdf by the system, rather than creating the pdf file yourself.
+%Please include with your resubmission an itemised list detailing how you have responded to each of the various comments on this version, plus any other supporting statements you would like us to consider.
+%Please do not hesitate to contact me should you require any further assistance or information. All correspondence regarding the decision should be sent to the editorial office, rather than direct to the editors or reviewers.
+
+%Best wishes,
+
+%James Ross
+%Assistant Editor
+
+%Handling Editor Comments for Authors:
+
+%The authors have presented an interesting paper on a new methodology using GLMMs for explaining species abundance distributions with a novel use of random effects for detecting patterns. This research area is currently quite topical and the proposed modelling approach is promising. The paper has been positively received by me and the three reviewers, however, there are many question marks over various aspects of the paper that require further attention.
+
+%My main criticism of the paper is that there is often an assignment of a variance component to a particular ecological effect but I believe that there may be other plausible explanations. This has also been picked up by each reviewer (although expressed by each quite differently!).
+
+%There are problems with the code that was given, for example the first model produces an AIC values of 79883.5, which does not appear in Table S2. And there are problems further down after the model fitting procedures where code does not run. It is great to provide code, but it has to work perfectly. In its current form it does not inspire confidence, especially given that a new statistical method is being developed.
+
+%Following on from the previous two points, I think it would be very useful to include a new appendix where a worked example is provided and the interpretations of the output are explained in detail, perhaps just for a select few models. Essentially this would be a tutorial style appendix with code plus output plus interpretations combined. Ideally I would also like to see some probing of the model assumptions via some simulation (as suggested by reviewer 3) but I acknowledge this may be a lot of work for this paper so even a presentation of some examples of where the method breaks down would be useful for illustrating the limitations of the approach. This could be part of the suggested tutorial appendix or a separate one. I would also like to see additional model diagnostics in the supporting information, what has been done in this regard is not sufficient (see comments from each reviewer on this). 
+
+%Overall, this new method has potential and I hope the authors will provide a revision in due course.
+
+%Referees' comments:
+
+%Reviewer: 1
+
+%COMMENTS FOR THE AUTHOR
+
+%General:
+%The key novelty of the paper is to use generalized linear mixed models (GLMM) to determine the relative importance (L84) of niche and neutral processes in observational data that consist of abundance, environment and trait data and to use the GLMM model as a model to ‘explain’ the species abundance distribution (SAD) in the abundance data. The main theoretical concept follows Herault 2007 and uses groups of species (EG: Emerging Groups) defined on the basis of key species traits.
+%The paper translates ecological concepts and processes to fixed and random terms in a GLMM. I missed a discussion of the reverse, namely whether a particular term can only interpreted in this way or also has potentially other interpretations. [Similar to that SADs can be explained by many models].
+%The models with different configurations of terms are ranked on the basis of AIC and AIC weights. The analysis shows that good models should include EG in interaction with environment (here altitude). Models with neutral terms only have a low AIC weight (on the scale that is used). The AIC ranking does not directly show relative importance. It does show the existence of non-random trait/niche process in shaping the abundance data and, hence, the SAD. However, I  question the AIC scale used. I wondered how these weights would change if the GLMM would have assumed a negative binomial (NB) for the counts from the start, instead of the current Poisson with sampled sites:species random effects (Table S3). A current big difference in AIC will become smaller. Fitting the GLMM with NB would be possible in R::INLA. Change AIC to wAIC in this case.
+%The fixed terms of the model (i.e. the non-neutral terms) explain 9% of the variance (R2 = 0.09, L255) in the best model. The best model explains 85% in total (R2 = 0.85), so that most of the variance is due to random/stochastic terms. With NB used directly, the 85% would go down drastically, I guess.
+%The paper follows the current popularity of ranking models on the basis of AIC and of estimation of sizes of effects. The 9% is low, and one might wonder whether the fixed terms are actually statistically significant.
+%Because the paper wants to show that there is more in the data than neutral theory predicts (L44-49, L58-59), there is a real place for statistical testing of particular statistical hypotheses.  The text on line 47 say “If the ecological equivalent hypothesis is rejected...” but no such hypothesis is tested. Without the Emerging groups in the model, does species identity matter? The null model here is that species names are exchangeable, suggesting the use of permutation tests.  Current statistical tests on trait-environment association do both species-level and community-level tests (Peres-Neto et al. 2017, ter Braak 2017, ter Braak et al. 2017). With Emerging groups in the model, permutations could be restricted to random permutation of species within Emerging groups (if made real groups), so as to show that species identity within groups does not matter.
+%The fit of the SADs in Fig. 2 is extremely good, in fact too good. The reason is the inclusion of the sampled sites:species random effect in the fit (because of the Poisson assumption). This is a term that has a coefficient for each observation! The fit based without this random effect would be worse. Also, how does the fit of the neutral model look?
+%I also wondered whether all necessary random terms were included in the model. I missed particularly a  x|SP term where x is altitude. Such terms appear in recent GLMM models for trait-environment analysis (Pollock et al. 2012, Jamil et al. 2013). Such term is essential for valid estimation of the standard error of the trait-environment fixed effect. The term (1|sampled sites) motivated in (Jamil et al. 2013) is also missing; it is also a nice neutral term standing for all what could have been happened with the sites. If a term like A|SP is included in the model, should it be considered a neutral term or a non-neutral term??
+%I also wondered whether traits are really the only way to criticize neutrality only. What about phylogeny? Simpler, what about environment only? In the data, the altitude effect of each species is replicated three times (in different mountain ranges). If there is a real common effect (thus independent of mountain range), then dispersion, drift etc. as sole factors are ruled out. This can be tested, I believe, using permutation tests with random permutations (or of shifts) of sites within mountain ranges.
+%You could add remarks/discussion on the role of competition. Herault 2007 p 74 considers residual covariances between species within emergent groups as indicative for the successful definition of Emerging groups. Residual covariances can be studied in the GLMM type approaches, e.g. (Ovaskainen et al. 2017).
+%You could add a discussion on the fact that elevation in the data set is also spatial variable. Variation partitioning between environment and space (a x-y coordinates) would show only shared variance. This is not a problem per se. Space should instead be a stochastic component only for dispersion limitation. In this respect you could try to find a short range dispersal variance component, instead of in addition to the variance components sites within mountain ranges and mountain ranges (with/out species dependence or EG dependence).
+%The paper has potential. In its current form, I cannot judge whether the observed trait-environment effects are real, because of missing terms in the GLMM and because no methods have been applied that make these effects beyond reasonable doubt. The AIC weights are open to question in this respect, particularly because of the Poisson assumption.
+%Details:
+%L5-6. Delete: “, incorp... SADs”.
+%L11 Delete “combination of”. A combination of groups is again a group...
+%L14 Delete “show to”
+%L19 Hierarchical? Sure? In which sense; see below.
+%L22 given -> specific
+%L29 environment is missing here.
+
+%Table S3 shows that also fixed terms of squared altitude in interaction with traits are included. Note that that such terms model the widths of niches in relation to the traits. But none of this is visible in Fig. 1, so it is difficult to judge for me. See also  Jamil et al. (2014) for an alternative approach. They also discuss the Emerging groups of Scheffers and van Nes for their data.
+%The term (1|species) has estimated variance component 0 (Table S3). What might this imply/mean?
+%I found the sentence construction often difficult. Please avoid “not only, but also” make it two sentences..
+%L44 translate? Rephrase. It should be adapted to the environment (incl. resources) and then the niche concept come in.
+%L45. Invert: Abundances should be correlated to the species traits [and add: ]and to the environment (Dray and Legendre 2008).
+%L93. “Thus, niche differentiation defines each Emergent Group”. How can? EGs are defined on traits in the paper.
+%L99 “in a hierarchy from neutral to niche models”. Rephrase. It is not a from-to.
+%L107 “Abundance determined by traits”. This read like a main effect. But it should be an interaction (also in line 112), because it %is adapted to something, namely the environment. So where is environment in the sentence? So combine/rephrase with line 109-110.
+%L114 Reads strange as environment should be explicit already.
+%L119. Mention fixed effects and their role as well.
+%L206 Why linear here?
+%L241 Explain what you mean with ‘relative’ here.
+%L248 Why a “but”. Why “still”? Rephrase.
+%L303-308. How did you detect these patterns in the SAD?
+%L315. Does this sentence say something. It sounds like all is possible; there is a relation but which one??
+%L321 “dominance”. Do you mean the role of dominance?
+%L327 “its position on the altitudinal gradient” It is the position of the species (e.g. its optimum, Jamil et al 2014) or is it the position of the sample?
+%L328-329 “Still remains” I did not understand this sentence.
+%L464,477 “tradeoffs” where did you show these? I did not see how/whether they were shown in the data or data analysis.
+%L481 reconciling -> combining?
+%Figure 1. Why do the bars not line up with the dashed line? Both are said to be SE. s
+%Reconsider the title.
+%Cajo ter Braak, Wageningen 17 October 2017.
+
+%Dray, S., and P. Legendre. 2008. Testing the species traits environment relationships: The fourth-corner problem revisited. Ecology 89:3400-3412.
+%Jamil, T., C. Kruk, and C. J. F. ter Braak. 2014. A Unimodal Species Response Model Relating Traits to Environment with Application to Phytoplankton Communities. Plos one 9:e97583.
+%Jamil, T., W. A. Ozinga, M. Kleyer, and C. J. F. ter Braak. 2013. Selecting traits that explain species–environment relationships: a generalized linear mixed model approach. Journal of Vegetation Science 24:988-1000.
+%Ovaskainen, O., G. Tikhonov, A. Norberg, F. Guillaume Blanchet, L. Duan, D. Dunson, T. Roslin, and N. Abrego. 2017. How to make more out of community data? A conceptual framework and its implementation as models and software. Ecology Letters 20:561-576.
+%Peres-Neto, P. R., S. Dray, and C. J. F. ter Braak. 2017. Linking trait variation to the environment: critical issues with community-weighted mean correlation resolved by the fourth-corner approach. Ecography 40:806-816.
+%Pollock, L. J., W. K. Morris, and P. A. Vesk. 2012. The role of functional traits in species distributions revealed through a hierarchical model. Ecography 35:716-725.
+%ter Braak, C. J. F. 2017. Fourth-corner correlation is a score test statistic in a log-linear trait–environment model that is useful in permutation testing. Environmental and Ecological Statistics 24:219-242.
+%ter Braak, C. J. F., P. Peres-Neto, and S. Dray. 2017. A critical issue in model-based inference for studying trait-based community assembly and a solution. PeerJ 5:e2885.
+
+%Reviewer: 2
+
+%COMMENTS FOR THE AUTHOR (please also see attachment)
+
+
+%This study introduces a framework for testing the contribution of different types of processes (e.g. neutral, niche processes) to overall community structure. The authors test their framework using fern data from mountain ranges in Brazil. I like the idea and think the paper makes a nice contribution to this topic. The spectrum of niche-neutral processes is a key research interest at present and the authors’ contribution provides a useful new approach for looking at this question. As such, most of my comments are relatively minor, but some additions and clarification is needed from the authors in certain areas.
+
+%In addition, the writing / language / English needs some work. I have tried to correct the language throughout most of the MS, but as this has resulted in over 100 edits I have attached the commented/corrected PDF rather than write out each change here individually – this will allow the authors to see any changes in the text and accept or reject them etc. However, the discussion in particular requires a lot of language edits, and I ran out of time to go through them all. As I did not want to delay returning my review I have left most of the discussion. However, I have signed my review, so the authors are welcome to contact me if they want me to have a look at the rest of it.
+
+%Major comments
+
+%The core part of the proposed approach, that you can divide/translate these main processes up into fixed and random effects is intriguing, but I would like to see more discussion on how solid the authors think this assumption is in reality? For example, could any random variation in abundance between species be due to sampling-type effects rather than neutral effects per se?
+
+%The discussion is quite long – I think it could do with being a bit clearer and more concise. As it is, it seems to go off on tangents and loses track of the main and novel findings.
+
+%General comments
+
+%Line 35: seems silly perhaps, but I’d introduce what a SAD is
+
+%Line 99: Here, you use the term ‘hierarchy’.  Can you expand on this as ‘from neutral to niche’ implies, to me at least, that neutral processes are higher in the hierarchy? Is this what you mean? Figure 3 also implies a hierarchy of sorts, but from niche to neutral. And you do mean a hierarchy rather than a spectrum from neutrality to niche, as argued by certain other authors.
+
+%103: Below you include idiosyncratic as a category, but not here? Also, I think you need to be clearer about how idiosyncratic and neutral processes are different; as a first glance idiosyncratic could be seen to represent a neutral case.
+
+%199: did you check for over dispersion if you’re using a Poisson distribution?
+
+%Box 1: Is there any way of joining Box 1 and Table 2, so you can see how the different predictions are translated into the models? Without having to look at different things in the MS. At the very least, direct the reader to Table 2 in the box.
+
+%Box 1 (and throughout ms): Just using the term “niche” or “neutral” seems strange, may be use niche dynamics or niche processes.
+
+%Line 256 (and many other places, e.g. line 299): You use the term “selected model” a lot in the paper, but it is confusing as to what model this applies to. Do you mean best model? For example, Line 279 – you say “in the model” – again, which model is this? Then in line 357 you say “our model” – by this do you mean the best model, your modelling approach, or something else? Try and be consistent.
+
+%283-295: this text seems to just be a copy of an above paragraph.
+
+%313-318: seems more like this text should be in the discussion
+
+%446: what is environmental filtering if independent of species traits?
+
+%Fig 1 (f) – is it correct that the + SE is below the predicted values?
+
+%Tom Matthews (txm676@gmail.com)
+
+%Reviewer: 3
+
+%COMMENTS FOR THE AUTHOR
+
+%The paper examines niche-based and neutral based distribution of species abundances using a series of mixed-effects models. It begins with a set of hypothesis how mixed-effect models can be used to identify niche specialization and drift components of species abundance. While niche effects correspond to fixed effect due to traits, the neutral effects are site-specific random effects of abundances. It then uses distributional & abundance data on ferns to fit such models and uses AIC to find the best model and thus to identify the relative role of each of these components. I should say that I like this (simple) approach and was not able to find a logical fault in their reasoning (which does not mean that there is none). W
+%It is based on the assumption that traits responsible for niche components are known a priori. This is the major weakness of the approach, with all the obvious questions about important traits missed (which thus increase the "neutral" component), and irrelevant traits included. (The latter can be handled by model selection, but not the former.) I would appreciate discussion examining which random effect will get inflated if some important traits (i.e. components of niche differentiation) are not included. It also will have difficulties (namely for the Emergent groups) if traits (i.e. niche differentiation proxies) are continuous.
+%A related assumption is the identity of niche differentiation with trait differentiation.
+%In an ideal world, I would ask the authors to test the approach on artificially generated data and back-reconstruct the assumptions on which the artificial data have been based. Only this could provide the ultimate test of the assumptions that are made in the intro. While this perhaps cannot be done for the current paper, I would like to stimulate the authors to provide such analysis to support their arguments at some point later.
+
+%Specific comments
+
+%Title: the title raises expectation that the paper will be dealing primarily with species abundance distributions. This is only partly true: while SAD are fitted in the paper, in my mind the main focus (and contribution) of the paper lies in the use of separation of niche and neutral components in species abundances, and the prediction of SAD is only a kind of a bonus. I would consider renaming the paper, as papers on SAD are often fairly technical and often not an exciting reading for an ecologist.
+%M&M: it is sometimes confusing to follow what is a locality, site etc. This is important to make clear as these correspond to individual random effects.
+%li 159: study of Paciencia: this is the same data set on which the current study is based?
+%Box 1: there is a spatially correlated component of random variation in Emergent groups models, but it is conceptually possible to have spatially-correlated variation also in other model types. Why is it not included? Conceptual or technical reasons?
+%Traits used: In the fern example, the authors use three traits and use AIC to determine which ones contribute to community structure. Although these traits are certainly relevant (not very surprisingly – we have known for quite some time that terrestrial and epiphytic ferns are different :-) ). In particular, I miss traits on plant regeneration, as prothallia are often the most sensitive component of the fern life cycle and known to be responsive to a number of stress factors such as temperature or water availability.
+%li 254: marginal R2 – in which model?
+%li 80 and  553: Kattge
+%Table 1: as Emergent groups must be defined using categorical traits, it is not clear how laminar thickness is used (cutpoints between individual categories?)
+%Table 1: papyraceous?
+%Fig. 1 and 2: this looks like an excellent fit, but I would appreciate seeing similar plots with true abundances (as dots) and predicted values. Also residual plots may be informative (e.g. for the electronic appendix).
+%Table S2: reporting both variance and s.d. for random effects is superfluous
+
+
+%James Ross
+%Assistant Editor - Journal of Ecology
+
+
+\end{document}
