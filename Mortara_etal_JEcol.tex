@@ -279,11 +279,11 @@ leftmargin=.01cm,rightmargin=.01cm
  \textbf{Box 1. Predictions for each general hypothesis.} \\
  \noindent\rule[0.5ex]{\linewidth}{1pt}
   \paragraph{{\color{grey}{$\blacksquare$}} Idiosyncratic} ~\\ Differences in abundance are due to random variation among local, regional communities and species.
-\paragraph{{\color{neutral}{$\blacksquare$}} Neutral dynamics} ~\\ Differences in species abundances are due to limited dispersal at regional scale (i.e., among metacommunities) and at local scale (i.e., within metacommunites). Therefore, local SADs are the result of random variation of abundances at each regional and local sampling site. %site and also SADs vary randomly among sites and localities. (ii) Differences in species abundances are due to limited dispersal among localities: same as above but random variation SADs do not vary among sampling sites within the same locality. 
-\paragraph{{\color{niche}{$\blacksquare$}} Niche dynamics } ~\\ Species abundances are defined by trait-environment correlations. The effect of ecological strategies on abundance are positive in some portions of the gradient but negative in others. In this case, if niche dynamics are affecting species abundance but the selected traits are not meaningful, one should expect a correlation between species and the environmental gradient.  
+\paragraph{{\color{neutral}{$\blacksquare$}} Drift dynamics} ~\\ Differences in species abundances are due to limited dispersal at regional scale (i.e., among metacommunities) and at local scale (i.e., within metacommunites). Therefore, local SADs are the result of random variation of abundances at each regional and local sampling site. %site and also SADs vary randomly among sites and localities. (ii) Differences in species abundances are due to limited dispersal among localities: same as above but random variation SADs do not vary among sampling sites within the same locality. 
+\paragraph{{\color{niche}{$\blacksquare$}} Selection dynamics } ~\\ Species abundances are defined by trait-environment correlations. The effect of ecological strategies on abundance are positive in some portions of the gradient but negative in others. In this case, if niche dynamics are affecting species abundance but the selected traits are not meaningful, one should expect a correlation between species and the environmental gradient.  
 %\paragraph{{\color{nineu}{$\blacksquare$}} Emergent Groups} ~\\ %(i) Absolute fitness differences among strategies, but there is random variation in species abundances among species sharing the same ecological strategy. (ii)
 %Trait-environment correlation but there is stochastic differences in species abundances among species with the same ecological strategy.
-\paragraph{{\color{nineu}{$\blacksquare$}} Niche-neutral dynamics} ~\\ Trait-environment correlation but there are stochastic differences in species abundances among species with the same ecological strategy. In addition, 
+\paragraph{{\color{nineu}{$\blacksquare$}} Selection-Drift dynamics} ~\\ Trait-environment correlation but there are stochastic differences in species abundances among species with the same ecological strategy. In addition, 
 %(i) Emergent groups with absolute fitness differences with limited dispersal: abundances are affected by ecological strategies but also have a random variation among species. This variation among species also occurs among metacommunites. (ii) Emergent groups model with limited dispersal among and within metacommunites. %and : 
 there is random variation at regional and local scales. Similarly with the niche dynamics hypothesis, if the selected traits are not meaningful but there is an effect of the environment, one should expect a correlation between species and the environmental gradient.    
 %(iii) Emergent groups model with trait-environment correlation and with limited dispersal at regional and local scales. Random variation among species also occur among and within metacommunities.
@@ -706,18 +706,18 @@ Random effects & Random effects & Random effects \\
   \hline
  \textbf{Group} & \textbf{Hypothesis} & \textbf{logLik} & \textbf{AICc} & \textbf{{$\Delta$}LogLik} & \textbf{{$\Delta$}AICc} & \textbf{df} & \textbf{weight} \\ 
   \hline
-  \multirow{6}{*}{Core} & Niche-neutral & -2267.12 & 4570.83 & 24807.56 & 0.00 &  18 & 1.00 \\ 
- & Niche-neutral (no traits) & -2280.45 & 4583.13 & 24794.23 & 12.30 &  11 & 0.00 \\ 
- & Neutral & -2295.59 & 4599.21 & 24779.10 & 28.38 &   4 & 0.00 \\ 
- & Niche (no traits) & -14376.44 & 28771.02 & 12698.25 & 24200.19 &   9 & 0.00 \\ 
- & Niche & -23360.86 & 46754.19 & 3713.83 & 42183.36 &  16 & 0.00 \\ 
+  \multirow{6}{*}{Core} & Selection-Drift & -2267.12 & 4570.83 & 24807.56 & 0.00 &  18 & 1.00 \\ 
+ & Selection-Drift (no traits) & -2280.45 & 4583.13 & 24794.23 & 12.30 &  11 & 0.00 \\ 
+ & Drift & -2295.59 & 4599.21 & 24779.10 & 28.38 &   4 & 0.00 \\ 
+ & Selection (no traits) & -14376.44 & 28771.02 & 12698.25 & 24200.19 &   9 & 0.00 \\ 
+ & Selection & -23360.86 & 46754.19 & 3713.83 & 42183.36 &  16 & 0.00 \\ 
  & Idiosyncratic & -27074.69 & 54157.41 & 0.00 & 49586.58 &   4 & 0.00 \\ 
    \cmidrule(lr){1-8}	
-\multirow{6}{*}{Occasional}& Neutral & -1961.01 & 3930.04 & 6690.16 & 0.00 &   4 & 0.82 \\ 
- & Niche-neutral (no traits) & -1955.47 & 3933.03 & 6695.70 & 2.99 &  11 & 0.18 \\ 
- & Niche-neutral & -1956.40 & 3949.01 & 6694.77 & 18.97 &  18 & 0.00 \\ 
- & Niche (no traits) & -5741.06 & 11500.16 & 2910.12 & 7570.12 &   9 & 0.00 \\ 
- & Niche & -8313.08 & 16658.32 & 338.10 & 12728.27 &  16 & 0.00 \\ 
+\multirow{6}{*}{Occasional}& Drift & -1961.01 & 3930.04 & 6690.16 & 0.00 &   4 & 0.82 \\ 
+ & Selection-Drift (no traits) & -1955.47 & 3933.03 & 6695.70 & 2.99 &  11 & 0.18 \\ 
+ & Selection-Drift & -1956.40 & 3949.01 & 6694.77 & 18.97 &  18 & 0.00 \\ 
+ & Selection (no traits) & -5741.06 & 11500.16 & 2910.12 & 7570.12 &   9 & 0.00 \\ 
+ & Selection & -8313.08 & 16658.32 & 338.10 & 12728.27 &  16 & 0.00 \\ 
  & Idiosyncratic & -8651.18 & 17310.37 & 0.00 & 13380.32 &   4 & 0.00 \\ 
   \hline
 \end{tabular}
