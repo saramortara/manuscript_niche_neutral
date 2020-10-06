@@ -22,13 +22,12 @@
 \usepackage{multirow}
 
 \usepackage{xcolor} % Required for specifying colors by name
-\definecolor{color}{RGB}{128,0,0} % Define the color used for highlighting throughout the book
-\definecolor{blue}{RGB}{69,74,159} %Redifines the default for the color blue
+%\definecolor{color}{RGB}{128,0,0} % Define the color used for highlighting throughout the book
 \definecolor{color}{RGB}{0,0,0}%{64,63,111} %navy blue % Define the color used for highlighting throughout the book
 \definecolor{blue}{RGB}{69,74,159} %Redifines the default for the color blue
-\definecolor{niche}{RGB}{202, 0, 32}
-\definecolor{neutral}{RGB}{4,4,160}
-\definecolor{nineu}{RGB}{245,219,58}
+\definecolor{niche}{RGB}{128, 20, 17}
+\definecolor{neutral}{RGB}{9, 19, 70}
+\definecolor{nineu}{RGB}{214, 168, 56}
 \definecolor{grey}{RGB}{180,177,172}
 
 \usepackage{makecell} % for cell alignment 
@@ -616,7 +615,7 @@ affecting species abundances in the context of emergent groups and
 limited dispersal. Although we have applied our modeling approach to a specific data set, it comprises a general tool to disentangle niche and neural effects in any given community. 
 
 \section*{Acknoledgments} 
-Authors acknowledge Fundação O Boticário para Proteção da Natureza for facilitating the data collection. SM thanks CAPES DS for finacial support. Authors thanks Eduardo Santos and Luis Schiezari for insightful comments on previous versions of this manuscript. SM thanks to Brian McGill, Xiao Xiao and Sarah Supp for valuable discussions on the ideas presented in this manuscript. 
+Authors acknowledge Fundação O Boticário para Proteção da Natureza for facilitating the data collection. SM thanks CAPES DS for finacial support. Authors thanks Eduardo Santos and Luis Schiezari for insightful comments on previous versions of this manuscript. SM thanks to Brian McGill, Xiao Xiao and Sarah Supp for valuable discussions on the ideas presented in this manuscript.
 
 \section*{Authors' Contributions} 
 SM, AAO and PIP performed conceptual modeling work, SM performed statistical analysis, MP, JP and PHL collected data and identified fern species, SM wrote the manuscript with all authors contributing substantially to the final version.
@@ -638,13 +637,13 @@ All authors have agreed in putting data used in the manuscript available on Drya
     \caption{ Species traits included in the models to draw an ecological strategy.}\label{trait}
   %\rowcolors{1}{}{lightgray}
   \begin{tabular}{cp{4cm}p{6cm}}
-\hline
+ \toprule	
 \bf{Trait}	&	\bf{States}	&	\bf{Definition} 	\\
 \hline
 Laminar thickness	&	Membranaceous and coriaceous.	&	Laminar thickness was defined in a binary system in which species were separated in membranaceous (from membranaceous to papiraceous) and coriaceous (from cartaceous to coriaceous).	 \\
 Indumentum	&	Absence and presence.	&	Defined as presence or absence of hair and scales on the laminar tissue.  \\
 Life form	&	Terrestrial, epiphyte herb, and hemiepiphyte herb.	&	Species were classified in terms of habitat preferences for growth. Terrestrial life form includes terrestrial herbs and tree ferns. Epiphyte herbs were separated in epipyte and hemiepiphyte. \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -698,31 +697,26 @@ Random effects & Random effects & Random effects \\
 \end{table}
 
 % table 3
-  \begin{table}[!ht]
-  \caption{Results of model selection for core and occasional species (See Table S3 for coefficient values of the best models.)}\label{aic}
-  %\rowcolors{1}{}{lightgray}
-\centering
-\begin{tabular}{llrrrrrr}
-  \hline
- \textbf{Group} & \textbf{Hypothesis} & \textbf{logLik} & \textbf{AICc} & \textbf{{$\Delta$}LogLik} & \textbf{{$\Delta$}AICc} & \textbf{df} & \textbf{weight} \\ 
-  \hline
-  \multirow{6}{*}{Core} & Selection-Drift & -2267.12 & 4570.83 & 24807.56 & 0.00 &  18 & 1.00 \\ 
- & Selection-Drift (no traits) & -2280.45 & 4583.13 & 24794.23 & 12.30 &  11 & 0.00 \\ 
- & Drift & -2295.59 & 4599.21 & 24779.10 & 28.38 &   4 & 0.00 \\ 
- & Selection (no traits) & -14376.44 & 28771.02 & 12698.25 & 24200.19 &   9 & 0.00 \\ 
- & Selection & -23360.86 & 46754.19 & 3713.83 & 42183.36 &  16 & 0.00 \\ 
- & Idiosyncratic & -27074.69 & 54157.41 & 0.00 & 49586.58 &   4 & 0.00 \\ 
-   \cmidrule(lr){1-8}	
-\multirow{6}{*}{Occasional}& Drift & -1961.01 & 3930.04 & 6690.16 & 0.00 &   4 & 0.82 \\ 
- & Selection-Drift (no traits) & -1955.47 & 3933.03 & 6695.70 & 2.99 &  11 & 0.18 \\ 
- & Selection-Drift & -1956.40 & 3949.01 & 6694.77 & 18.97 &  18 & 0.00 \\ 
- & Selection (no traits) & -5741.06 & 11500.16 & 2910.12 & 7570.12 &   9 & 0.00 \\ 
- & Selection & -8313.08 & 16658.32 & 338.10 & 12728.27 &  16 & 0.00 \\ 
- & Idiosyncratic & -8651.18 & 17310.37 & 0.00 & 13380.32 &   4 & 0.00 \\ 
-  \hline
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{llrrrr}
+\toprule
+\textbf{Group}    & \textbf{Hypothesis}          & \textbf{AICc} & \textbf{{$\Delta$}AICc} & \textbf{df} & \textbf{weight} \\ \hline
+\multirow{6}{*}{Core}   & Trait-mediated Selection-Drift     & 4570.83       & 0.00                    & 18          & 1.00            \\ 
+                         & Drift     & 4583.13       & 12.30                   & 11          & 0.00            \\ 
+                         & Selection    & 4599.21       & 28.38                   & 4           & 0.00            \\ 
+                       & Trait-mediated Selection      & 28771.02      & 24200.19                & 9           & 0.00            \\  
+                  & Idiosyncratic            & 46754.19      & 42183.36                & 16          & 0.00            \\ \
+                            & 54157.41      & 49586.58                & 4           & 0.00            \\ \hline
+\multirow{6}{*}{Occasional} & 3930.04       & 0.00                    & 4           & 0.82            \\ 
+                            & 3933.03       & 2.99                    & 11          & 0.18            \\ 
+                            & 3949.01       & 18.97                   & 18          & 0.00            \\ 
+                            & 11500.16      & 7570.12                 & 9           & 0.00            \\ 
+                            & 16658.32      & 12728.27                & 16          & 0.00            \\ 
+                            & 17310.37      & 13380.32                & 4           & 0.00            \\  \bottomrule
 \end{tabular}
 \end{table}
-
 
 \clearpage
 
@@ -744,8 +738,8 @@ Random effects & Random effects & Random effects \\
 
 %\newpage
 
-
-
+% including supplementary
+\include{supplementary_material}
 
 
 \end{document}
