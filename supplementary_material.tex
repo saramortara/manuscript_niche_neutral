@@ -84,20 +84,18 @@ including fixed-effect variances. These functions are available in the
 script `functions.R' but applies only to models within our framework.
 For generic functions please see packages (rptR and MuMIn).
 
-\begin{table}
+\begin{table}[!ht]
 
 \caption{\label{tab:table-prop}Proportion of models with {$\Delta$} AIC {$<$}  2 at each scenario.}
 \centering
-\begin{tabular}[t]{lrrrrrr}
-\hline
-Scenario & Trait-mediated Selection \& Drift & Selection \& Drift & Trait-mediated Selection & Selection & Drift & Idyosyncratic\\
+\begin{tabular}[t]{p{3cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
+\toprule
+\textbf{Scenario} & \textbf{Trait-mediated Selection} \& \textbf{Drift} & \textbf{Selection \& Drift} & \textbf{Trait-mediated Selection} & \textbf{Selection \& Drift} & \textbf{Idyosyncratic}\\
 \hline
 Deterministic with right traits & 1.00 & 0.00 & 0 & 0.00 & 0 & 0\\
-\hline
 Deterministic with wrong traits & 0.00 & 0.82 & 0 & 0.18 & 0 & 0\\
-\hline
 Stochastic with right traits & 0.02 & 0.00 & 0 & 0.00 & 1 & 0\\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 

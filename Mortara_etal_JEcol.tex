@@ -718,22 +718,40 @@ Random effects & Random effects & Random effects \\
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 \begin{table}[]
+    \caption{Model selection results for each group with$\Delta$AIC, AIC, degrees of freedom (df) and Akaike weight.}
+
+
 \begin{tabular}{llrrrr}
 \toprule
-\textbf{Group}    & \textbf{Hypothesis}          & \textbf{AICc} & \textbf{{$\Delta$}AICc} & \textbf{df} & \textbf{weight} \\ \hline
-\multirow{6}{*}{Core}   & Trait-mediated Selection-Drift     & 4570.83       & 0.00                    & 18          & 1.00            \\ 
-                         & Drift     & 4583.13       & 12.30                   & 11          & 0.00            \\ 
-                         & Selection    & 4599.21       & 28.38                   & 4           & 0.00            \\ 
-                       & Trait-mediated Selection      & 28771.02      & 24200.19                & 9           & 0.00            \\  
-                  & Idiosyncratic            & 46754.19      & 42183.36                & 16          & 0.00            \\ \
-                            & 54157.41      & 49586.58                & 4           & 0.00            \\ \hline
-\multirow{6}{*}{Occasional} & 3930.04       & 0.00                    & 4           & 0.82            \\ 
-                            & 3933.03       & 2.99                    & 11          & 0.18            \\ 
-                            & 3949.01       & 18.97                   & 18          & 0.00            \\ 
-                            & 11500.16      & 7570.12                 & 9           & 0.00            \\ 
-                            & 16658.32      & 12728.27                & 16          & 0.00            \\ 
-                            & 17310.37      & 13380.32                & 4           & 0.00            \\  \bottomrule
+\textbf{Group} &\textbf{Hypothesis} & \textbf{$\Delta$AICc} & \textbf{AICc} & \textbf{df}& \textbf{weight}\\
+\hline
+ & Trait-mediated Selection \& Drift & 0.00 & 4570.83 & 18 & 1.00\\
+
+ & Selection \& Drift & 12.30 & 4583.13 & 11 & 0.00\\
+
+ & Drift & 28.38 & 4599.21 & 4 & 0.00\\
+
+ & Selection & 24200.19 & 28771.02 & 9 & 0.00\\
+
+ & Trait-mediated Selection & 42183.36 & 46754.19 & 16 & 0.00\\
+
+\multirow{-6}{*}{\raggedright\arraybackslash Core} & Idiosyncratic & 49586.58 & 54157.41 & 4 & 0.00\\
+\cline{1-6}
+ & Drift & 0.00 & 3930.04 & 4 & 0.82\\
+
+ & Selection \& Drift & 2.99 & 3933.03 & 11 & 0.18\\
+
+ & Trait-mediated Selection \& Drift & 18.97 & 3949.01 & 18 & 0.00\\
+
+ & Selection & 7570.12 & 11500.16 & 9 & 0.00\\
+
+ & Trait-mediated Selection & 12728.27 & 16658.32 & 16 & 0.00\\
+
+\multirow{-6}{*}{\raggedright\arraybackslash Occasional} & Idiosyncratic & 13380.32 & 17310.37 & 4 & 0.00\\
+
+\bottomrule
 \end{tabular}
+\label{tab:aic_tab}
 \end{table}
 
 \clearpage
@@ -742,7 +760,7 @@ Random effects & Random effects & Random effects \\
 
 \begin{figure}[!h]
  \begin{center}
-\includegraphics[scale=.75]{./fig/rad_mettacomunity.pdf}
+\includegraphics[scale=.75]{./fig/rad_metacommunity.pdf}
 \end{center}
 \caption{Mean SAD of the metacommunity showing core and occasional species in a Brazilian Atlantic Rainforest of Paran\'a State (A). Core species are assembled by a combination of niche and neutral dynamics and occasional species are assembled by a purely neutral dynamic. Dots represent abundance mean across sites and bars represent abundance standard deviation. Grey area represent predicted values from the models. An example of a core species, \emph{Polybotrya cylindrica} (Dryopteridaceae) that is affected by correlation of environment and traits across the altitudinal gradient (B). An example of a occasional species \emph{Trichomanes polypodioides} (Hymenophyllaceae) in which its abundance vary independent of its traits and the environmental gradient (C). \label{rad}}
 \end{figure}
