@@ -277,7 +277,7 @@ unimodal relationships of abundances with the altitudinal gradient and also foll
 
 In a community driven by drift abundance of all species drift randomly around the same mean value, therefore, abundance of each species would be a realization of the same random process. We translated the drift dynamic by adding random effects of species identities correlated with regions and local sites (i.e., local and regional limited dispersal) in a linear model. %In addition, we included local sites as a random effect by itself to represent a drift process.
 
-Comparing a set of statistical models can be done using model selection by identifying which model the data support best. By combining model selection with the translation of each hypothesis whithin a set of models, we can have models that express alternative hypotheses and then compare them simultaneously \citep{Johnson2004}.
+Comparing a set of statistical models can be done using model selection by identifying which model the data support best. By combining model selection with the translation of each hypothesis within a set of models, we can have models that express alternative hypotheses and then compare them simultaneously \citep{Johnson2004}.
 As a result, based on the selected model we can predict the abundance of a species along the environmental gradient and identify which factors best predicts species abundance rank and, thus, which class of mechanisms prevail in the 
 assemblage of the community. 
 Therefore, we used GLMMs as a way to build strong inferences (sensu \cite{Mcgill2003}) on the influence of ecological strategies and altitude on species abundances. 
@@ -324,13 +324,16 @@ values to the rank-abundances diagrams of the abundances predicted by the select
 
 \section*{Results}
 
-\subsection*{Core and occasional species}
+%\subsection*{Core and occasional species}
 
-By dividing species into core and occasional we found those groups are being differently affected by community processes (Table \ref{}). We found that occasional species are affected by drift dynamics only. Abundance of core species, however, are better predicted by a combination of selection and drift dynamics. For core species, species traits affect species abundance and interact with altitude, but
-we still detected a large effect of drift and limited dispersal.
+By dividing species into core and occasional we found those groups are being differently affected by community processes (Table \ref{tab:aic_tab}), thus the metacommunity SAD is composed by a mixture of different processes. We found that abundance of occasional species are explained by the Drift hypothesis (total R$^2$ = 0.89). Abundance of core species, however, are better predicted by the Selection \& Drift hypothesis. For core species, species traits such as laminar thickness and life form affect species abundance and interact with altitude, although we still detected a large effect of drift and limited dispersal. For cores species, we partitioned the R$^2$ into the drift and selection components and found that most of variation of abundance of core species is being explained by the drift component (R$^2$ drift = 0.82) with a small portion of the variation (R{$^2$} being attributed to selection (R$^2$ selection = 0.05). 
 
+For some core species, a particular ecological strategy is related to abundance conferring high mean values and a relatively low confidence interval (Figure \ref{fig:rad} A). However the latter is not true for all core species given that for some other abundant species a lot of variation across the mean value remains. Occasional species exhibit lower mean abundance values than core species with a consistent pattern of high confidence interval around the mean abundance. 
+
+Even though only a small portion of the variation in mean abundance of core species are explained by the selection component, there are still some clear patterns of response of a particular ecological strategy across the altitudinal gradient (Figure \ref{fig:rad B}. In contrast, abundance of occasional species so not respond to the variation in the altitudinal gradient (Figure \ref{fig:rad C}.
+
+% all old results:
 %The best model have the effects of ecological strategy interacting with altitude and also the effects of neutral drift within localities and sampled sites (Table \ref{pesos}, see also Tables S2 and S3).
-
 %It is worth noting that the set of models that express the Emergent Group and limited dispersal hypotheses accumulated almost all the evidence weight (sum of Akaike weight=0.99, with the weight of 0.96 for the best model). Also, most of the variance in abundance is explained by the combination of fixed and random effects (i.e. conditional R${^2}$), instead of fixed effects alone (conditional R${^2}$=0.85, marginal R${^2}$=0.09).  
 %In the selected model Emergent Groups were defined by combinations of
 %life form and leaf thickness:  
@@ -341,7 +344,6 @@ we still detected a large effect of drift and limited dispersal.
 %(iv) hemiepiphyte species coriaceous leaves;
 %(v) epiphyte species with membraceous leaves;
 %(vi) epiphyte species with coriaceous leaves; as well as altitude and the interactions between altitude and ecological strategies. Since this model also retain species as the random effect, variation of abundance within ecological strategies represents the Emergent Groups. 
-
 %The interaction between strategy and altitude highlights that species
 %mean abundances within some combination of traits are higher in some
 %altitudinal levels but lower in others (Fig. \ref{grad}). 
@@ -363,17 +365,12 @@ we still detected a large effect of drift and limited dispersal.
 %this
 %variation (Fig. \ref{grad}) which was captured by the interaction between random
 %effects of species with sites and with localities. In the model the interaction between species and localities accounted fo%r random variation in abundances caused by drift under limited dispersal among metacommunities, whereas the interaction between species and localities accounted for variation in species abundance caused limited dispersal within metacommunites. 
-
 %Analyzing ecological strategies, we observe that for terrestrial and hemiepiphyte species individuals with membranaceous leaves present an abundance peak at intermediate altitudes of the gradient (600 to 800 m). Individuals with coriaceous leaves present higher values of abundance on  lowland forests, with decreasing abundance values following the decrease in altitude (Fig \ref{grad}.a-d). Whereas terrestrial and hemiepipyte species presented similar patterns of abundance along altitudinal variation, we observed a distinct pattern for epiphyte species. In general, epiphyte species tend to be more abundant on extreme altitudes of the gradient (Fig \ref{grad}.e-f). The pattern is more conspicuous for epiphyte species with coriaceous leaves. It is worth noting that above 1,200 m epiphyte species are predominantly abundant.   %% Não seria melhor começar com estes dados empíricos?
 %Although some combination of traits confer, on average, high values of abundance depending on the altitude, 
 %the success of a species is also conditioned to random variation of abundance in species of the same emergent group and 
 %limited dispersal related to localities and sampled sites, represented by predicted standard errors (Fig \ref{grad}).
-
-\subsection*{Generating SADs}
-
+%\subsection*{Generating SADs}
 % add figure
-
-% old results
 %When analyzing the general pattern of SADs along the altitudinal
 %gradient we observed high dominance on extreme altitudes -- 
 %lowland and high montane forests -- and more  
@@ -762,14 +759,14 @@ Random effects & Random effects & Random effects \\
  \begin{center}
 \includegraphics[scale=.75]{./fig/rad_metacommunity.pdf}
 \end{center}
-\caption{Mean SAD of the metacommunity showing core and occasional species in a Brazilian Atlantic Rainforest of Paran\'a State (A). Core species are assembled by a combination of niche and neutral dynamics and occasional species are assembled by a purely neutral dynamic. Dots represent abundance mean across sites and bars represent abundance standard deviation. Grey area represent predicted values from the models. An example of a core species, \emph{Polybotrya cylindrica} (Dryopteridaceae) that is affected by correlation of environment and traits across the altitudinal gradient (B). An example of a occasional species \emph{Trichomanes polypodioides} (Hymenophyllaceae) in which its abundance vary independent of its traits and the environmental gradient (C). \label{rad}}
+\caption{Mean SAD of the metacommunity showing core and occasional species in a Brazilian Atlantic Rainforest of Paran\'a State (A). Core species are assembled by a combination of niche and neutral dynamics and occasional species are assembled by a purely neutral dynamic. Dots represent abundance mean across sites and bars represent abundance standard deviation. Grey area represent predicted values from the models. An example of a core species, \emph{Polybotrya cylindrica} (Dryopteridaceae) that is affected by correlation of environment and traits across the altitudinal gradient (B). An example of a occasional species \emph{Trichomanes polypodioides} (Hymenophyllaceae) in which its abundance vary independent of its traits and the environmental gradient (C). \label{fig:rad}}
 \end{figure}
 
 \begin{figure}[!ht]
  \begin{center}
 %\includegraphics[scale=.48]{./fig3.pdf}
 \end{center}
-\caption{Interpretation of how niche and neutral processes can generate observed patterns of species abundances. (a) Environmental filtering selects the best ecological strategies of species depending on the environment. On average, the success of a particular ecological strategy is defined by niche. (b) Remaining variance of abundance is due to neutral processes such as drift among species sharing the same ecological strategies and limited dispersal among and within metacommunities.} \label{final}
+\caption{Interpretation of how niche and neutral processes can generate observed patterns of species abundances. (a) Environmental filtering selects the best ecological strategies of species depending on the environment. On average, the success of a particular ecological strategy is defined by niche. (b) Remaining variance of abundance is due to neutral processes such as drift among species sharing the same ecological strategies and limited dispersal among and within metacommunities.} \label{fig:final}
 \end{figure}
 
 %\newpage
