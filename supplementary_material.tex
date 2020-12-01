@@ -6,41 +6,38 @@
 \maketitle
 
 In order to show how we implemented our framework and how model
-components are translated into niche and neutral dynamics we performed
+components are translated into selection and drift dynamics we performed
 simulations as described below. Our goal is to address main criticisms
 of our framework being: (1) Are fixed and random effects actually
-capturing niche and neutral dynamics? (2) Are random effects only
-capturing neutral dynamics or uninformed species traits are inflating
+capturing selection and drift dynamics? (2) Are random effects only
+capturing drift dynamics or uninformed species traits are inflating
 random effects?
 
 \subsection*{Material and Methods}\label{material-and-methods}
 
-We use simulated communities based on niche and neutral dynamics in
+We use simulated communities based on selection and drift dynamics in
 order to show how fixed and random effects capture different ecological
 processes. Also, we use traits with strong and weak correlations to
 species abundance in order to show how fixed and random effects capture
-neutral dynamics when traits are uninformative. Therefore, we simulate
+drift dynamics when traits are uninformative. Therefore, we simulate
 stochastic and deterministic meta-communities and use strong or weak
 traits in model selection.
 
 We simulate meta-communities with the same data structure as our
 abundance data of ferns in three mountain chains in southern Brazil.
 Then, we make Poisson of communities and use samples from the
-meta-communities in our model selection framework.
+metacommunities in our model selection framework.
 
 We analyze into three scenarios:
 
 \begin{itemize}
 \tightlist
 \item
-  Deterministic community with traits strongly correlated with species
-  abundance from Poisson sample
+  Deterministic community with traits strongly correlated with species abundance from Poisson sample
 \item
-  Deterministic community with traits poorly correlated with species
-  abundance from Poisson sample
+  Deterministic community with traits poorly correlated with species abundance from Poisson sample
 \item
-  Stochastic community with traits strongly correlated with species
-  abundance from Poisson sample
+  Stochastic community with traits strongly correlated with species abundance from Poisson sample
 \end{itemize}
 
 \subsubsection*{Building simulated
@@ -60,7 +57,7 @@ deterministic communities with strong traits, traits are highly
 correlated with the environmental gradient. In, stochastic communities
 species are also selected based on the environmental gradient, however
 the standard deviation from the mean response to the gradient is
-incredible high. Also, stochastic communities exihibit a dispersal
+incredible high. Also, stochastic communities exhibit a dispersal
 kernel of 200. For each scenario we generated 100 communities that were
 then sampled with sampling effort of 20000 individuals. Our objective
 here is to generate a scenario in which data is sampled from a Poisson
