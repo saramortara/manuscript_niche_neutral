@@ -13,7 +13,7 @@ capturing selection and drift dynamics? (2) Are random effects only
 capturing drift dynamics or uninformed species traits are inflating
 random effects?
 
-\subsection*{Material and Methods}\label{material-and-methods}
+\subsection*{Goals}\label{material-and-methods}
 
 We use simulated communities based on selection and drift dynamics in
 order to show how fixed and random effects capture different ecological
@@ -40,11 +40,10 @@ We analyze into three scenarios:
   Stochastic community with traits strongly correlated with species abundance from Poisson sample
 \end{itemize}
 
-\subsubsection*{Building simulated
+\subsection*{Building simulated
 communities}\label{building-simulated-communities}
 
-We used the R
-\href{package MCSIM}{http://rstudio-pubs-static.s3.amazonaws.com/159425_80725873417e42fdb13821c10a198281.html} from Eric Sokol to create simulations of metacommunities to test
+We used the R package MCSIM (available at: https://github.com/sokole/MCSim) from Eric Sokol to create simulations of metacommunities to test
 assumptions about their underlying processes underlying (Sokol et
 al.~2015). To replicate a data set analogous to our data all
 metacommunities were composed by 30 sites in three regions with 153
@@ -63,7 +62,7 @@ then sampled with sampling effort of 20000 individuals. Our objective
 here is to generate a scenario in which data is sampled from a Poisson
 distribution, representing the structure of species abundance data
 
-\subsubsection*{Fitting models to simulated
+\subsection*{Fitting models to simulated
 data}\label{fitting-models-to-simulated-data}
 
 We used our framework to fit models for each community in the three
@@ -81,15 +80,19 @@ including fixed-effect variances. These functions are available in the
 script `functions.R' but applies only to models within our framework.
 For generic functions please see packages (rptR and MuMIn).
 
-% paragrafo resultados
+\subsection*{Results}\label{results}
+
+Based on our simulations, we found that deterministic communities with traits highly correlated to abundance are being explained by the Trait-mediated Selection hypothesis (Table S1). As expected, deterministic communities with traits poorly correlated to abundance are being explained mainly by the Selection \& Drift hypothesis. Stochastic communities are being explained by the Drift hypothesis.   
+
+By examining the partition of $R^{2}$ values, we can understand how selection and drift terms are capturing variance in species abundance (Figure S1). When comparing deterministic communities with traits correlated to abundance with stochastic communities, it is clear that in the first case, most of the $R^{2}$ is composed of the fixed effects. In contrast, the variance in the abundance of stochastic communities is mostly due to the component of regional limited dispersal (1|SP:R). For deterministic communities with traits poorly correlated to abundance, we still see that most of the $R^{2}$ is composed by selection terms, however, most of the variation is being explained by the term (1 + G|SP) which represents the variance of species abundance in respect to the gradient but independent of the measured traits. In other words, this term can identify if the model is being built with the wrong traits. 
 
 \begin{table}[!ht]
 
 \caption{\label{tab:table-prop}Proportion of models with {$\Delta$} AIC {$<$}  2 at each scenario.}
 \centering
-\begin{tabular}[t]{p{3cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
+\begin{tabular}[t]{p{3cm}p{2cm}p{2.cm}p{2.cm}p{2cm}p{2cm}p{2cm}}
 \toprule
-\textbf{Scenario} & \textbf{Trait-mediated Selection} \& \textbf{Drift} & \textbf{Selection \& Drift} & \textbf{Trait-mediated Selection} & \textbf{Selection \& Drift} & \textbf{Idyosyncratic}\\
+\textbf{Scenario} & \textbf{Trait-mediated Selection} \& \textbf{Drift} & \textbf{Selection \& Drift} & \textbf{Trait-mediated Selection} & \textbf{Selection \& Drift} & \textbf{Drift} & \textbf{Idyosyncratic}\\
 \hline
 Deterministic with right traits & 1.00 & 0.00 & 0 & 0.00 & 0 & 0\\
 Deterministic with wrong traits & 0.00 & 0.82 & 0 & 0.18 & 0 & 0\\
@@ -101,7 +104,7 @@ Stochastic with right traits & 0.02 & 0.00 & 0 & 0.00 & 1 & 0\\
 \begin{figure}
 \centering
 \includegraphics[scale=.9]{fig/S1.png}
-\caption{Figure S1.}
+\caption{Figure S1.}\label{fig:r2}
 \end{figure}
 
 \end{document}
