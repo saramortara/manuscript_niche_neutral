@@ -124,6 +124,7 @@ In contrast with this neutral view, species identities would matter if the linea
 If the ecological equivalence hypothesis is rejected, a strong theory for SADs would be the one that could predict not only the shape of the curve but also if a species would be common or rare based on its traits \citep{Mcgill2003}. 
 For instance, SADs have been described as a mixture of abundances of two groups of species, the core (persistent) and satellite (occasional) species \citep{Magurran2003}.
 % PI ter 13 out 2020 09:37:50 -03: Sugestão "Moreover, sets of species can be more or less ecological equivalent, and thus SADs can be a mixture ...
+% PI 17 dez 2020: sugeri est iníco de sentença acima pq acho que o "for instance" está fazendo uma passagem meio brusca de aum assunto ao outro. Se não for isto acho que precisa conectar melhor com o as sentenças anteriores de algum jeito.
 Core and occasional species would follow different statistical models for SADs, indicating that these two groups are being affected by different processes. Furthermore, \cite{Supp2015} showed that core and satellite species exhibit different life-history strategies, showing a link between temporal persistence, local abundance and species life-history traits.
 
 The recognition of different groups of species in the local community is an important step to put SADs in a broader ecological and evolutionary context \citep{McGill2007, Swenson2012}, but we can go further by asking what defines each group. The obvious choice to identify groups of species in SADs is to look for traits that correlate with their abundances.  Thus, placing SADs in a framework that allows testing the ecological equivalence of species would help to disentangle underlying niche and neutral mechanisms. Assessing trait-environment correlations in community ecology has concerned ecologists for decades since \cite{Raunkiaer1934} characterization of plant life forms adapted to the environment \citep[see also][]{Grime1977, Connell1978}. Early development of a trait-based approach focused on descriptions of the variation of life history traits along environmental gradients. In the past 20 years, trait-based approaches focused on quantitative measurements of traits for testing non-random trait dispersion in community assembly
@@ -138,7 +139,7 @@ variation across environmental gradients \citep{shipley2006plant, cornwell2009co
 The remarkable influence of trait-based approaches in plant community ecology could be considered a paradigm shift from species to trait-based ecology \citep{Pavoine2011, Swenson2012}, represented by the emergence of methods and theories as well as the implementation of a global database for plant species traits (TRY) \citep{Kattage2011}.
 % adicionando aqui info da Jamil e ter Braak. Precisa contextualizar trait-environment models Miler and Ovaskainen
 In addition, a few multilevel model approaches \citep{Pollock2012, Jamil2013, Jamil2013a, Miller2019, TerBraak2019} have been developed to assess trait-environment models from community data. Differently from the emphasis in quantifying diversity through metrics, these models allow to detect what drives species abundance in a community.
-%PI ter 13 out 2020 09:49:45 -03: acho que aqui pdoeria já ser mais específico sobre o que esta baordagem faz. Algo como "Differently from the emphasis in quantifying diversity through community-wide metrics, these models relates the abundances of each species to their traits.
+%PI ter 13 out 2020 09:49:45 -03: acho que aqui pdoeria já ser mais específico sobre o que esta abordagem faz. Algo como "Differently from the emphasis in quantifying diversity through community-wide metrics, these models relates the abundances of each species to their traits.
 Still, much of this trait-based work has focused on species interactions independent of SADs \citep{Swenson2012}. 
 Even thought here have been some efforts to incorporate trait information in SADs \citep{Magurran2003, Supp2015} by asking what defines functional groups we can go further by asking what is the relative importance of biological traits versus stochasticity in shaping species abundances.
 %PI ter 13 out 2020 09:52:49 -03: acho que o trabalho do Ter Braak e talvez boa parte do Joint-sepcies models tb façam parte deste esforço. Aí acho que já não caracterizaria "some efforts", pq é bastante coisa. Talvez indicar que a abordagem da Magurram e estes modelos vão na direção de incorporar traits na análise de SADs e com isso reconhecer diferentes grupos funcionais e que isso por sua vez pode ajudar a investigar the relative importance of biological traits versus stochasticity in shaping species abundances.
@@ -175,118 +176,186 @@ Our proposal is to test what drives species abundance of core and occasional spe
 \section*{Material and methods}
 
 \subsection*{Study site and sampling methods}
-In order to test for trait-environment correlations on species abundances we 
-used abundance data of fern species sampled along an
-altitudinal gradient  in three  
-locations of the Brazilian Atlantic rainforest at 
-Serra
-do Mar mountain chain, in Paran\'a State from \cite{Paciencia2008}.
-The sampled gradient ranged from
-sand dune vegetation at the coastal plain (0 to 10 m a.s.l.) to high montane 
-Ombrophilous Forest areas (1,500 m a.s.l.) in three mountain ranges 
-in this ecorregion: 
-Serra da 
-Graciosa (25{$^{\circ}$} 21'S, 48{$^{\circ}$} 54'W), Pico do Marumbi 
-(25{$^{\circ}$} 27'S, 48{$^{\circ}$} 55'W), and Serra da Prata (25{$^{\circ}$} 
-37'S, 48{$^{\circ}$} 41'W). From 0 to 700 m a.s.l. the climate is subtropical with hot summer and 
-without a dry season (Cfa) and with mean temperature 
-during summer above 22{$^{\circ}$} C. Above 700 m a.s.l. the climate is 
-subtropical with warm summer and without dry season (Cfb). Since all mountains 
-are part of the same mountain chain, with controlled distance (from 14 to 41 km 
-distant from each other), we considered sampling sites at the same
-altitudinal level as replicates from local communities. 
-In fact, floristic similarity among sites at the same altitude is higher than 
-floristic similarity among sites from the same mountain range 
-\citep{Paciencia2008}. 
+In order to test for trait-environment correlations on species
+abundances we used abundance data of fern species sampled along an
+altitudinal gradient in three locations of the Brazilian Atlantic
+rainforest at Serra do Mar mountain chain, in Paran\'a State from
+\cite{Paciencia2008}.  The sampled gradient ranged from sand dune
+vegetation at the coastal plain (0 to 10 m a.s.l.) to high montane
+Ombrophilous Forest areas (1,500 m a.s.l.) in three mountain ranges in
+this ecorregion: Serra da Graciosa (25{$^{\circ}$} 21'S,
+48{$^{\circ}$} 54'W), Pico do Marumbi (25{$^{\circ}$} 27'S,
+48{$^{\circ}$} 55'W), and Serra da Prata (25{$^{\circ}$} 37'S,
+48{$^{\circ}$} 41'W). From 0 to 700 m a.s.l. the climate is
+subtropical with hot summer and without a dry season (Cfa) and with
+mean temperature during summer above 22{$^{\circ}$} C. Above 700 m
+a.s.l. the climate is subtropical with warm summer and without dry
+season (Cfb). Since all mountains are part of the same mountain chain,
+with controlled distance (from 14 to 41 km distant from each other),
+% PI 17 dez 2020: não entendi o que seria controlled distance. Pequenas o suficiente?
+we considered sampling sites at the same altitudinal level as
+replicates from local communities.  In fact, floristic similarity
+among sites at the same altitude in this mountain chain is higher than
+floristic similarity among sites from the same mountain range
+\citep{Paciencia2008}.
  
-Vegetation along the altitudinal gradient varies following changes in soil, 
-humidity, temperature, and precipitation levels. 
-The coastal plain is occupied by scrubland and low forest on poor, white-sand 
-soils. 
-Lowland Ombrophilous Forest occupies the transition between the coastal plain and 
-the mountain range, where the sandy soil has poor drainage but higher fertility. 
-Submontane Ombrophilous Forest occurs from 30 to 400 m a.s.l. and harbors large 
-trees growing on deep clay soils of the hillside. Montane Ombrophilous Forest occurs 
-from 400 to 1,000 m a.s.l. on lithic soils limiting the growth of large 
-trees. Montane forests occur where there are less severe environmental 
-conditions in terms of humidity, temperature, and precipitation. High-montane 
-Ombrophilous Forests occurs from 1,000 to 1,600 m a.s.l. with predominance of 
-lithic soils and where woody stractum is composed by crooked trunks of small 
-size. 
-We used elevation above sea level to represent the altitudinal gradient as a
+Vegetation along the altitudinal gradient varies following changes in
+soil, humidity, temperature, and precipitation levels.  The coastal
+plain is occupied by scrubland and low forest on poor, white-sand
+soils.  Lowland Ombrophilous Forest occupies the transition between
+the coastal plain and the mountain range, where the sandy soil has
+poor drainage but higher fertility.  Submontane Ombrophilous Forest
+occurs from 30 to 400 m a.s.l. and harbors large trees growing on deep
+clay soils of the hillside. Montane Ombrophilous Forest occurs from
+400 to 1,000 m a.s.l. on lithic soils limiting the growth of large
+trees. Montane forests occur where there are less severe environmental
+conditions in terms of humidity, temperature, and
+precipitation. High-montane Ombrophilous Forests occurs from 1,000 to
+1,600 m a.s.l. with predominance of lithic soils and where woody
+stractum is composed by crooked trunks of small size.  We used
+elevation above sea level to represent the altitudinal gradient as a
 proxy for variation in vegetation type, humidity, temperature, and
-precipitation.  
-Although altitude represents a set of variables, it is 
-recognized that
-fern species have specific elevational distributions related to their
-ecological requirements \citep{Mehltreter2010} and fern diversity is correlated with elevation 
-exhibiting a peak at intermediate elevations \citep{Kessler2001,Cardelus2006,WatkinsJr2006}. 
+precipitation.  Although altitude represents a set of variables, it is
+recognized that fern species have specific elevational distributions
+related to their ecological requirements \citep{Mehltreter2010} and
+fern diversity is correlated with elevation exhibiting a peak at
+intermediate elevations
+\citep{Kessler2001,Cardelus2006,WatkinsJr2006}.
 
-A total of 30 sites were sampled, 10 in each locality,
+A total of 30 sites were sampled, 10 in each mountain range %locality,
 distributed at 0, 10, 50 m, and from 200 to 1,400 at 200 m elevation
-intervals. In each site, one 20 x 20 m plot was located. 
-All fern individuals under 2 m from the forest floor were sampled, including terrestrial ferns, such as terrestrial herbs and tree ferns,
-hemiepiphyte and epiphyte herbs (only individuals in which the lowermost leaf was up to 2 m from the ground). 
-Abundance was measured as the number
-of ramets of each species in each sample unit. The study of Paciencia (2008) 
-recorded
-19,938 individuals belonging to 153 fern species. 
+intervals. In each site, one 20 x 20 m plot was
+located. % PI 17 dez 2020: randomly located?
+All fern individuals under 2 m from the forest floor
+% PI 17 dez 2020: não entendi aqui se under 2m from forest floor
+% significa até 2 m de altura apenas? Se é isso só não tinha me
+% tocado, pq há epífitas tb e achei que a amostragem cobria altura
+% maiores
+within the plots were recorded %sampled,
+including terrestrial ferns, such as terrestrial herbs and tree ferns,
+hemiepiphyte and epiphyte herbs (only individuals in which the
+lowermost leaf was up to 2 m from the ground).
+% PI 17 dez 2020: não seria melhor "all individuals that had at at least one leaf below 2m from the ground"?
+Abundance was measured
+as the number of ramets of each species in each plot %sample unit.
+%The study of Paciencia (2008) recorded 19,938 individuals belonging to 153 fern species.
+A total of 19,938 individuals belonging to 153 fern species has been recorded in the plots \cite{Paciencia2008}.
 
 \subsection*{Ecological strategy and species abundances}
 
-In order to assess trait-environment correlations with species abundances we tested which set of traits define an ecological strategy. We chose three traits
-that are related to species local abundances and that 
-should respond to environmental changes 
-along the altitudinal gradient. 
-Our choice was based on limitations imposed on ferns due to aspects of
-their biology such as intolerance to fluctuating conditions and poorly
-controlled evaporative control \citep{Page2002}. Ferns may be less efficient in 
-water use than seed plants due to an inefficient stomatal control, that relies 
-only on passive closure \citep{Brodribb2011}. 
-In the absence of
-strategies to deal with such limitations, ferns have more success on
-moist habitats where environmental conditions remain constant
-\citep{Page2002}, characteristics such as those found in intermediate altitudes 
-of the studied gradient.
-In fact, in the context of Emergent Groups, species traits involved in potential 
-challenges faced by plants should be good candidates for delineating Emergent Groups 
-\citep{Herault2007}.
+In order to assess trait-environment correlations with species
+abundances we tested which set of traits define an ecological
+strategy. We chose three traits that are related to species local
+abundances and that should respond to environmental changes along the
+altitudinal gradient.  Our choice was based on limitations imposed on
+ferns due to aspects of their biology such as intolerance to
+fluctuating conditions and poorly controlled evaporative control
+\citep{Page2002}. Ferns may be less efficient in water use than seed
+plants due to an inefficient stomatal control, that relies only on
+passive closure \citep{Brodribb2011}.  In the absence of strategies to
+deal with such limitations, ferns have more success on moist habitats
+where environmental conditions remain constant \citep{Page2002},
+characteristics such as those found in intermediate altitudes of the
+studied gradient.  In fact, in the context of Emergent Groups, species
+traits involved in potential challenges faced by plants should be good
+candidates for delineating Emergent Groups \citep{Herault2007}.
 
-We chose two basic
-leaf traits that can confer advantages on dealing with water limitations:
-thickness and presence of 
-indumentum (Table \ref{trait}). Thick leaves can store water 
-and increase water use efficiency and the presence of indumentum can reduce 
-water loss from evapotranspiration \citep{Watkins2012}. Thus, thick and/or
-indumented leaves may enable species to persist on harsh environments
-such as lowland or high montane forests. 
-Additionally, life form, defined by the stratum
-a species occupies (e.g., terrestrial, hemiepiphyte, and epiphyte), is an important
-niche dimension in fern communities segregating species
-occupying different strata. 
-Based on the assumption that species within a life form may interact
-more intensely we included species life form as another trait to define an 
-ecological strategy. We then classified all 153 species based on these traits (see Table S1 in Supporting Information). 
+We chose two basic leaf traits that can confer advantages on dealing
+with water limitations: thickness and presence of indumentum (Table
+\ref{trait}). Thick leaves can store water and increase water use
+efficiency and the presence of indumentum can reduce water loss from
+evapotranspiration \citep{Watkins2012}. Thus, thick and/or indumented
+leaves may enable species to persist on harsh environments such as
+lowland or high montane forests.  Additionally, life form, defined by
+the stratum a species occupies (e.g., terrestrial, hemiepiphyte, and
+epiphyte), is an important niche dimension in fern communities
+segregating species occupying different strata.  Based on the
+assumption that species within a life form may interact more intensely
+we included species life form as another trait to define an ecological
+strategy. We then classified all 153 species based on these traits
+(see Table S1 in Supporting Information).
 
 \subsection*{Model fitting and selection}
 
-To assess the influence of species traits and the environmental gradient on species abundances we translated the selection, drift and emergent group hypotheses into generalized mixed-effect models (GLMMs). 
-For all models, we used as the response variable, species abundance recorded at each site and thus absences were recorded as zeros. We separated species into two groups of core and occasional species based on their abundance values in the metacommunity. We defined core species to be the first 40 most abundant species in the metacommunity and the other 93 species as satellite species. Then, we tested our hypotheses to these two groups separately. 
+To assess the influence of species traits and the environmental
+gradient on species abundances we translated the selection, drift and
+emergent group hypotheses into generalized mixed-effect models
+(GLMMs).  For all models, we used as the response variable species
+abundance recorded at each site and thus absences were recorded as
+zeros. We separated species into two groups of core and occasional
+species based on their abundance values in the metacommunity. We
+defined core species to be the first 40 most abundant species in the
+metacommunity and the other 93 species as satellite species. Then, we
+tested our hypotheses to these two groups separately.
 
-To test our hypotheses we built six models representing each of our general hypotheses for both core and occasional species (Box 1 and Table \ref{mod}). Species abundances were modeled as a Poisson variable with a logarithm link function. 
-Each term in the models represent a particular dynamic (Table \ref{mod}).  
+To test our hypotheses we built six models representing each of our
+general hypotheses for both core and occasional species (Box 1 and
+Table \ref{mod}). Species abundances were modeled as a Poisson
+variable with a logarithm link function.  Each term in the models
+represent a particular %dynamic
+ecological process (Table \ref{mod}).
 
 % aqui a troca de niche theory por selection fica estranha, repensar
-Selection predicts that differences in species abundances should be due to differences in species traits in response to the environment. Therefore, the use of ecological strategies as fixed effects means that species sharing the same ecological strategy would have the same linear response in terms of abundance along the altitudinal gradient. The effect of the environmental gradient is represented by altitude as a fixed effect in selection and selection-drift models. The altitudinal gradient is included as a second-order polynomial since the study of \cite{Paciencia2008} detected 
-unimodal relationships of abundances with the altitudinal gradient and also following \cite{Jamil2013a, Jamil2013} multilevel model proposal. Selection also predicts that each species should differ in terms of their response to the environment, so we also include species as a random effect in the models representing niche dynamics. We also include the observation level random effect (OLRE), the interaction of site and the environmental gradient, to take into account overdispersion \citep{Bolker2009}. By using the OLRE it is guaranteed that Poisson distribution is suitable for our data set, it makes flexible enough for any other cases and facilitates the calculation of the R{$^2$}.   
+% PI 17 dez 2020: tb achei que ficou um pouco estranho
+Selection predicts that differences in species abundances should be
+due to differences in species traits in response to the
+environment. Therefore, the use of ecological strategies as fixed
+effects %means
+express that species sharing the same ecological strategy would have
+the same %linear
+response in terms of abundance along the altitudinal gradient. The
+effect of the environmental gradient is represented by altitude as a
+fixed effect in selection and selection-drift models. The altitudinal
+gradient is included as a second-order polynomial following
+\cite{Jamil2013a, Jamil2013} multilevel model proposal, nad because
+the study of \cite{Paciencia2008} detected unimodal relationships of
+abundances with the altitudinal gradient. Selection also predicts that
+each species should differ in terms of their response to the
+environment, so we also include species as a random effect in the
+models representing niche dynamics. We also include the observation
+level random effect (OLRE), as the interaction of site and the
+environmental gradient, to take into account overdispersion
+\citep{Bolker2009}.  By using the OLRE our regression models describe
+abundances as inhomogeneous Poisson processes that allows for species
+conspecific aggregation. Moreover the inclusion of the OLRE in the
+model is necessary to the calculation of replicabilities (R{$^2$}, see
+below).
+%By using the OLRE it is
+%guaranteed that Poisson distribution is suitable for our data set, it
+%makes flexible enough for any other cases and facilitates the
+%calculation of the R{$^2$}.
 
-In a community driven by drift abundance of all species drift randomly around the same mean value, therefore, abundance of each species would be a realization of the same random process. We translated the drift dynamic by adding random effects of species identities correlated with regions and local sites (i.e., local and regional limited dispersal) in a linear model. %In addition, we included local sites as a random effect by itself to represent a drift process.
+In a community driven solely by drift the abundance of species would
+be a realization of the same random process that makes abundances vary
+across species ans sites. We thus translated the effect of drift by adding
+random effects of species identities correlated with
+% PI 17 dez 2020: correlated ou é uma interaçãow No segundo caso
+% escreveria "We thus translated the effect of drift by adding
+% random effects of the intercations of species and regiosn and sites."
+regions and local
+sites (i.e., local and regional limited dispersal) in a linear
+model. %In addition, we included local sites as a random effect by itself to represent a drift process.
 
-Comparing a set of statistical models can be done using model selection by identifying which model the data support best. By combining model selection with the translation of each hypothesis within a set of models, we can have models that express alternative hypotheses and then compare them simultaneously \citep{Johnson2004}.
-As a result, based on the selected model we can predict the abundance of a species along the environmental gradient and identify which factors best predicts species abundance rank and, thus, which class of mechanisms prevail in the 
-assemblage of the community. 
-Therefore, we used GLMMs as a way to build strong inferences (sensu \cite{Mcgill2003}) on the influence of ecological strategies and altitude on species abundances. 
-By using model selection with GLMMs we were able to translate alternative hypotheses into competing models. GLMMs have been widely used in Ecology and Evolution since it is common to have non-normal biological data that involves random effects \citep{Bolker2009}. Here, we innovated by using the structure of mixed models to represent alternative hypotheses involving selection and drift dynamics. 
+Comparing a set of statistical models can be done using model
+selection by identifying which model the data support best. By
+combining model selection with the translation of each hypothesis
+within a set of models, we can have models that express alternative
+hypotheses and then compare them simultaneously \citep{Johnson2004,Burham2002}.
+As a result, based on the selected model we can predict the abundance
+of a species along the environmental gradient and identify which
+factors best predicts species abundance rank and, thus, which class of
+mechanisms prevail in the assemblage of the community.  Therefore, we
+used GLMMs as a way to build strong inferences (sensu
+\cite{Mcgill2003}) on the influence of ecological strategies and
+altitude on species abundances.  By using model selection with GLMMs
+we were able to translate alternative hypotheses into competing
+models. GLMMs have been widely used in Ecology and Evolution
+% since it is common to have non-normal biological data that involves random effects
+, where data frequently has variance structures that does not fit the
+assumption of Gaussian independent observations \citep{Bolker2009}, as
+is our case study. Here, we %innovated by
+propose using the structure of mixed models to represent alternative
+hypotheses involving selection and drift dynamics.
 
 
 \global\mdfdefinestyle{exampledefault}{%
@@ -316,11 +385,24 @@ there is random variation at regional and local scales. Similarly with the niche
 
 Model fitting was done using numerical routines to approximate maximum
 likelihood \citep{Bates2013}. The models were then compared using the
-Akaike Information Criterion (AIC), a measure of support by the data. 
+Akaike Information Criterion (AIC), a measure of support by the data.
 The model with the lowest AIC value was selected as the most plausible
 statistical hypothesis and models with {$\Delta$}AIC differences less
-than two were considered equally plausible. We calculated the coefficient of determination R${^2}$ \citep{Nakagawa2013, Johnson2014} for the best model as a measurement of the amount of variation explained by each component in the model. We depicted the conditional R${^2}$ (i.e., variance explained by fixed and random effects) to provide a measurement of the effect of niche and neutral dynamics. We built our own function to calculate the partitioned R${^2}$ based on code of citep{Johnson2014} (code available at https://github.com/saramortara/niche\_neutral).
-All data analyses were done on R software \citep{RCoreDevelopmentTeam2009}, using the package lme4 \citep{Bates2013}.
+than two were considered equally plausible. We calculated the
+coefficient of determination R${^2}$ \citep{Nakagawa2013, Johnson2014}
+for the best model as a measurement of the amount of variation
+explained by each component in the model.
+% PI 17 dez 2020: Não seria melhor usar o termo "replicability' que o
+% Nakagawa tem usado, para distinguir do coef de determinação
+% tradicional?
+We depicted the conditional
+R${^2}$ (i.e., variance explained by fixed and random effects) to
+provide a measurement of the effect of niche and neutral dynamics. We
+built our own function to calculate the partitioned R${^2}$ based on
+code of citep{Johnson2014} (code available at
+https://github.com/saramortara/niche\_neutral).  All data analyses
+were done on R software \citep{RCoreDevelopmentTeam2009}, using the
+package lme4 \citep{Bates2013}.
 
 \subsection*{Generating SADs}
 
@@ -331,13 +413,26 @@ values to the rank-abundances diagrams of the abundances predicted by the select
 
 %\subsection*{Core and occasional species}
 
-By dividing species into core and occasional we found those groups are being differently affected by community processes (Table \ref{tab:aic_tab}), thus the metacommunity SAD is composed of a mixture of different processes. We found that the abundance of occasional species is explained by the Drift hypothesis (total \Rsquared = 0.89). The abundance of core species, however, is better predicted by the Selection \& Drift hypothesis. For core species, species traits such as laminar thickness and life form affect species abundance and interact with altitude, although we still detected a large effect of drift and limited dispersal. For cores species, we partitioned the \Rsquared into the drift and selection components and found that most of the variation of abundance of core species is being explained by the drift component (\Rsquared drift = 0.82) with a small portion of the variation (\Rsquared being attributed to selection (\Rsquared selection = 0.05). 
+By dividing species into core and occasional we found those groups are being differently affected by community processes (Table \ref{tab:aic_tab}), thus the metacommunity SAD is composed of a mixture of different processes. We found that the abundance of occasional species is explained by the Drift hypothesis (total \Rsquared = 0.89). The abundance of core species, however, is better
+predicted
+% PI 17 dez 2020: eu tendo a usar "described" ou 'explained" quando falo do ajuste do modelo aos dados. Pra deixar "predict" para o caso em que vc calibra o modelo com um conunto de dados e depois o utiliza para prever com outro conjunto.
+by the Selection \& Drift hypothesis. For core species, species traits such as laminar thickness and life form affect species abundance and interact with altitude, although we still detected a large effect of drift and limited dispersal. For cores species, we partitioned the \Rsquared into the drift and selection components and found that most of the variation of abundance of core species is being explained by the drift component (\Rsquared drift = 0.82) with a small portion of the variation  being attributed to selection (\Rsquared selection = 0.05). 
 
-Because of the novelty of our framework, we applied our framework to communities generated mainly by selection or drift dynamics (Supplementary material). We built three different communities: deterministic community with traits strongly correlated with species; deterministic community with traits poorly correlated with species abundance; and stochastic community with traits strongly correlated with species abundance. We made Poisson sample of each community and applied our framework. When comparing a selection-based community with a drift-based community, we found that  \Rsquared the deterministic community was mainly composed by selection terms while for the stochastic community, it was mainly composed of drift terms (Figure S1). Besides, we also compared the two deterministic communities with traits more or less correlated with abundance. We found that while communities with traits highly correlated with abundance the \Rsquared is mainly composed by the fixed effects in the model, for community with traits poorly correlated with abundance, the \Rsquared is mainly composed by the random term representing the interaction of species with the environmental gradient (i.e. (1 $+$ G$|$SP), Figure S1). This term represents the response of species to the gradient, but not related to the traits that are being measured and included in the model.   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PI 17 dez 2020: mexi bastante nesta parte dos resultados das simulações. Além das mudanças sugeridas, acho que a primeira parte de descrição breve dos métodos fica melhor na seção de métodos mesmo. Já a segunda dos resultados acho que poderia vir depois de toda a descrição dos padrões empíricos. Meio que para dar o recaod "Além disso, aqui vai a demonstração que de que nosso método faz o que promete"
+% Because of the novelty of our framework, we applied our framework to communities generated mainly by selection or drift dynamics
+To assess the effectivity of our model-based approach, we applied our framework to simulated communities generated by selection, drift and both (Supplementary material). We built three different communities type with the same number of species, same species abundances and number of sites and regions of our data set. One of the simulated deterministic community had species niches (that is, strict environmental limits for all species) and traits strongly correlated with species abundances. To check the effects of using unnefective traits we simulated another deterministic community, but with traits that correlated poorly with species abundances. Finally, we simulated a stochastic community, where species has no environmental limits, and occur only disperse by chance across sites and more rarely across regions.
+% with traits strongly correlated with species abundance. % PI 17 dez 2020: não entendi, na simulaçao estocástica os traits correlacionavam com algo
+We then simulated Poisson samples of each community at each site of the same sie as the real samples in our data set, and applied our framework. More details can be found at the Supplementary Material.
+% PI 17 dez 2020: Acho que a arte que termina aqui deveria ir para os métodos. Me parece simples criar uma seção "Benchmark tests of model selection" ou algo assim
+When we apply our framework to the simulated communities, we found that the model that expresses deterministic (niche) processes were always the best supported by the samples from deterministic communities. In the same vein, samples from simulated stochastic communities always supported the model that expresses only drift processes (Supplementary material, table ...). Most of the  \Rsquared  for the best supported model by deterministic communities was accounted by selection terms. Accordingly, drift terms accounted for most of the \Rsquared calculated for the model best supported by simulated stochatic communities (Figure S1). Finally, for deterministic communities with traits poorly correlated with abundance, the largest share of the \Rsquared for the random term representing the interaction of species with the environmental gradient (i.e. (1 $+$ G$|$SP), Figure S1). This term represents the response of species to the gradient, but not related to the traits that are being measured and included in the model.   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 For some core species, a particular ecological strategy is related to abundance conferring high mean values and a relatively low confidence interval (Figure \ref{fig:rad} A). However, the latter is not true for all core species given that for some other abundant species a lot of variation across the mean value remains. Occasional species exhibit lower mean abundance values than core species with a consistent pattern of the high confidence interval around the mean abundance. 
 
-Even though only a small portion of the variation in mean abundance of core species is explained by the selection component, there are still some clear patterns of response of a particular ecological strategy across the altitudinal gradient (Figure \ref{fig:spp} A-C). In contrast, the abundance of occasional species does not respond to the variation in the altitudinal gradient (Figure \ref{fig:spp} D-F). For instance, core species sharing the strategy of epiphyte species with membranaceous leaves (Figure \ref{fig:spp} A) are more abundant on higher altitudes. An occasional species sharing the same ecological strategy do not exhibit a response to the altitudinal gradient. Similarly, core hemiepiphyte species with coriaceous leaves (Figure \ref{fig:spp} B) are more abundant on lower to intermediate altitudes and their occasional ecological equivalent does not exhibit the same response to the gradient. Core terrestrial species with membranaceous, in turn, occur in higher abundance at lower altitudes. As in the other occasional species, an occasional species sharing the same trait as their core counterpart do not exhibit the same response to the altitudinal gradient. These examples also show how the different ecological strategies confer different responses to the altitudinal gradient for the core species.
+Even though only a small portion of the variation in mean abundance of core species is explained by the selection component, there are still some clear patterns of response of a ecological strategies across the altitudinal gradient (Figure \ref{fig:spp} A-C). In contrast, the abundance of occasional species does not respond to the variation in the altitudinal gradient (Figure \ref{fig:spp} D-F). For instance, core species sharing the strategy of epiphyte species with membranaceous leaves (Figure \ref{fig:spp} A) are more abundant on higher altitudes. An occasional species sharing the same ecological strategy do not exhibit a response to the altitudinal gradient. Similarly, core hemiepiphyte species with coriaceous leaves (Figure \ref{fig:spp} B) are more abundant on lower to intermediate altitudes and their occasional ecological equivalent does not exhibit the same response to the gradient. Core terrestrial species with membranaceous, in turn, occur in higher abundance at lower altitudes. As in the other occasional species, an occasional species sharing the same trait as their core counterpart do not exhibit the same response to the altitudinal gradient. These examples also show how the different ecological strategies confer different responses to the altitudinal gradient for the core species.
+% PI 17 dez 2020: esta última sentença me areceu repetir o que já está escrito antes. Vc acha que precisa?
 
 % all old results:
 %The best model have the effects of ecological strategy interacting with altitude and also the effects of neutral drift within localities and sampled sites (Table \ref{pesos}, see also Tables S2 and S3).
@@ -426,22 +521,28 @@ Even though only a small portion of the variation in mean abundance of core spec
 % considerações finais
 
 % resposta:
-Our conceptual framework allowed us to identify which processes define species abundances in a metacommunity. As \cite{Magurran2003} stated almost two decades ago, core and occasional species follow different SADs and our modeling approach identified that core species are affected by a mixture of selection and drift processes and abundance of occasional can be explained by drift only. Beyond identifying which processes explain abundance of core and occasional species, we were able to quantify the amount of influence of each process. The model for core species express the assembly of fern communities as combination of selection and drift \citep{Vellend2010}. The gradient acts as an environmental filter exerting a selective force on which species and trait frequencies will succeed in a given local environment \citep{Webb2010}.  Alternatively, within species sharing the same ecological strategy, species may have recruitment differences due to stochastic colonization rates or limited dispersal, generating stochastic changes in species abundances \citep{Gravel2006, Weiher2011}. Occasional species, responsible to the long tail of the SADs are driven purely by drift processes. 
+Our conceptual framework allowed us to identify which processes define species abundances in a metacommunity. As \cite{Magurran2003} stated almost two decades ago, core and occasional species follow different SADs and our modeling approach identified that core species are affected by a mixture of selection and drift processes while the abundance of occasional species can be explained by solely by drift. Beyond identifying which processes explain abundance of core and occasional species, we were able to quantify the amount of influence of each process. The model for core species express the assembly of fern communities as a combination of selection and drift \citep{Vellend2010}. The gradient acts as an environmental filter exerting a selective force on which species and trait frequencies will succeed in a given local environment \citep{Webb2010}.  Alternatively, within species sharing the same ecological strategy, species may have recruitment differences due to stochastic colonization rates or limited dispersal, generating stochastic changes in species abundances \citep{Gravel2006, Weiher2011}. Occasional species, responsible to the long tail of the SADs are driven purely by drift processes. % PI 17 dez 2020: bela síntese!
 
 % 1. bloco metodologico
 
 \subsection*{Selection and drift dynamics in mixed models }
 
-The models in our framework were build based on previous trait-correlation approaches \citep{Pollock2012, Jamil2013, Jamil2013a, Miller2019, TerBraak2019}, with the novelty of putting them in the context of selection and drift dynamics and relating them with SADs. Fixed effects are more obviously related to selection driven processes such as the interaction of an ecological strategy with the gradient. We also specified three additional random terms to account for random variation of species abundance still related to species identities or the gradient itself: the random variation of abundance in respect to the interaction of local sites with the gradient, the random variation in abundance relative to the species identities, and the random variation of species abundance relative to the interaction of the gradient and species identities. The latter random term representing was included to account for any response of species to the gradient that was not captured by the traits specified in the models. In other words, this term should capture if one is testing wrong traits. As shown by the results of our simulations (Supplementary material) the term actually captures the effect of traits that not correlated with species abundance. This is an important step in the evaluation of which traits should we consider for each specific study system. The available trait, is not always the most meaningful trait for understanding community process and herein we provided a straightforward method for identifying it. In addition to the biological meaning of the term, it also represents the OLRE. It is also a key term to account for overdispersion in a Poisson variable, which is very common when dealing with the response variable species abundance. Previous approches \citep{Miller2019, TerBraak2019} already brought up the importance of including the OLRE when using a multilevel model approach, however here we also use the term to capture if we are modeling the wrong traits. 
+The models in our framework were build based on previous trait-correlation approaches \citep{Pollock2012, Jamil2013, Jamil2013a, Miller2019, TerBraak2019}, with the novelty of putting them in the context of selection and drift dynamics and relating them with SADs. Fixed effects are more obviously related to selection-driven processes such as the interaction of an ecological strategy with the gradient. We also specified three additional random terms to account for random variation of species abundance still related to species identities or the gradient itself: the random variation of abundance in respect to the interaction of local sites with the gradient, the random variation in abundance relative to the species identities, and the random variation of species abundance relative to the interaction of the gradient and species identities. The latter random term  was included to account for any response of species to the gradient that was not captured by the traits specified in the models. In other words, this term should capture if one is testing wrong traits. As shown by the results of our simulations (Supplementary material) the term indeed captures the effect of traits that do not correlate with species abundance.
+% This is an important tool for the evaluation of which traits should we consider for each specific study system.
+we thus provide a straightforward method to check if the traits selected for analysis most meaningful to assess trait-based community assembly. In addition to the biological meaning of the term, it also represents the OLRE.
+% PI 17 dez 2020: aqui me perdi sobre de que termo vc está falando. Pq o OLRE não é o mesmo da interaçãõ trait:env, né?
+It is also a key term to account for overdispersion in a Poisson variable, which is very common when dealing with the response variable species abundance. Previous approches \citep{Miller2019, TerBraak2019} already brought up the importance of including the OLRE when using a multilevel model approach, however here we also use the term to capture if we are modeling the wrong traits. 
 
-Drift dynamics were captured by random effects and limited dispersal is depicted as random variations of abundance of each species at different spatial scales: among and within metacommunites (i.e., sampling sites and mountain ranges in our case). For our study system, it was clear that regional limited dispersal is a key process defining species abundance for occasional and core species. Finally, our framework allowed us to quantify the relative importance of selection and drift by applying the coefficient of determination R{$^2$} \citep{Nakagawa2013, Nakagawa2017} to the models. In addition to disentangle drift and selection dynamics, we provided the means to quantify the relative importance of each process. For instance, occasional species are purely affected by drift processes but for occasional species we were able to quantify in which extent selection processes are affecting species abundance. 
+Drift dynamics were captured by random effects, that describe limited dispersal as random variations of abundance of each species
+% at different spatial scales:
+among and within metacommunites (i.e., sampling sites and mountain ranges in our case). For our study system, it was clear that regional limited dispersal is a key process defining species abundance for occasional and core species. Finally, our framework allowed us to quantify the relative importance of selection and drift by applying the coefficient of determination R{$^2$} \citep{Nakagawa2013, Nakagawa2017} to the models. In addition to disentangle drift and selection dynamics, we provided the means to quantify the relative importance of each process. For instance, occasional species are purely affected by drift processes but for occasional species we were able to quantify in which extent selection processes are affecting species abundance. % PI 17 dez 2020: massa! Acho que vale uma sentença final indicando que as vantagens da abordagem e principalmete sua generalidade. Tipos, baseia-se em u framework de modelo bem conhecido e desenvolvido, e que a separação entre niche trait-based e drift random effects in the models proposed are general enough to be applied in a wide range of data set on metacomunities. 
 
 % 2. bloco sistema the estudo
 
 \subsection*{Insights from the study system to selection and drift interplay}
 
-Even though only a small portion of the variance in species abundance is due to selection dynamics, we still detect the effect of trait-based selection across the gradient. We defined ecological strategies for fern communities based on synthetic traits that are relevant for community assembly. Laminar thickness and life forms are obvious traits for plant ecologists that can relate to differences in species abundances. These traits are representative of the study system and exhibit tradeoffs across the gradient. 
-
+Even though we found that a small portion of the variance in species abundance can be attributed to selection dynamics, we still detect the effect of trait-based selection across the gradient.  
+%We defined ecological strategies for fern communities based on synthetic traits that are relevant for community assembly. Laminar thickness and life forms are obvious traits for plant ecologists that can relate to differences in species abundances. These traits are representative of the study system and exhibit tradeoffs across the gradient. % PI 17 dez 2020:  acho que estas sentenças ficaram meio vagas, passando da primeira para o detalhamento já deixa o ponto claro
 Our finding reinforces the assumption that terrestrial and epiphyte ferns can have different physiological and life cycle characteristics to deal with water and nutrient availability \citep{Page2002, Watkins2012}. In general, epiphyte species deal better with limited water and nutrient sources than terrestrial species \citep{Page2002, Schuettpelz2009, Watkins2012} which can explain why, in general, epiphyte species are more  abundant on high altitudes of the gradient. In addition to leaf traits, gametophytes of epiphyte ferns are more resistant to survive in harsh environments than terrestrial gametophytes \citep{Watkins2012}. Thus, the survival of the gametophyte combined with sporophyte strategies can make epiphyte species reach high values of abundance at the extremes of the gradient. Alternatively, terrestrial ferns have unique chemical compounds conferring advantage on the forest floor where there is low-light available \citep{Kawai2003} and where species with thin leaves can succeed. Photoreceptors in terrestrial ferns enhance light sensitivity by orienting leaves and chloroplasts and have contributed to the proliferation of ferns on low-light conditions \citep{Kawai2003}. Having these compounds may offset strategies of having thick leaves, contributing to high abundances of terrestrial ferns on lower and intermediate portions of the gradient, under dense canopy
 cover. The biology of hemiepiphyte is still poorly known in comparison with other life-forms \citep{Watkins2012}. Nevertheless we identified an abundance pattern different from epiphtyes with some similarities with terrestrial species. Differently from other studies on fern communities that separates the assemblage into terrestrial and epiphyte components \citep{WatkinsJr2006, Kluge2010}, our study identified hemiepiphyte species as a functional group apart. Since most hemiepiphytes spend only part of its life cycle as an epiphyte and can produce spores both on the ground and on trunks (JP pers. obs.), they can override terrestrial and epiphytes abundances where they occur. 
 
@@ -451,6 +552,9 @@ strategies conferring contributing to the success of core fern species.
 % 3. bloco teorias
 
 \subsection*{Tailoring SADs by linking selection and drift}
+% PI 17 dez 2020: eu adorei esta seção, mas acho que ela pertence ao bloco metodológico. Então acho que vale aproveitar boa parte do texto que está qui para este bloco, com cuidado de não deixá-lo muito grande. talvez algumas sentneças mais gerais aqui tb possam ir para as conclusões.
+% Já neste bloco acho que temos que nos restringir às contribuições à teoria que tenta descrever community assembly e SADs.
+%% Ideia ainda um pouco desorganizadas: considerações sobre como comunidade e metacomunidades são a combinação de drift e selection, mediada por traits. O desafio é não repetir o que está na introdução. Mas acho que dá para fazer uma síntese mostrando que Magurran propôs algo assim, indicando que um componente da comunidade é governado por drift e outro por seleção. E nós mostramos que há drift em todos os componentes (o que acho que pode ser uma afirmação geral, pois é uma consequência de haver mais de uma espécie com o mesmo nicho em uma comunidade, que é a ideia dos grupos emergentes). E também mostramos que drift pode ser overly important mesmo no grupo das core species. Enfim, ideia ainda pouco sistematizada, mas acho que o caminho é mostrar que nossa abordagem combina a ideia de core x occasionals da Magurran com a de grupos emergentes para compor um modelo verbal consistente e coerente. Não menionaria nada sobre os modelos estatísticos em si nesta seção. Por fim, a figura 3 pode ser o guia para redigir esta seção.
 
 Approaches based on functional traits have been used to demonstrate the importance of environmental  filtering  in  structuring  diverse  ecological communities \citep{lavorel2002predicting, Baraloto2012}. Even with a lot of methodological development in recent years, it is not easy to disentangle between trait versus neutral influences and methods fail to detect the signature of processes such as dispersal \citep{kembel2009disentangling}. 
 Linear models with random effects associated with species is an effective tool to describe joint responses of species groups to environmental gradients \citep{Jackson2012, Brown2014}. We extended this idea by choosing effects that can be interpreted as outcomes of drift dynamics and processes based on selection. Our modeling approach  decomposes the effects of drift in limited dispersal mechanisms.
@@ -459,20 +563,26 @@ The theory of metacommunity integrates environmental filtering, biotic interacti
  Our method is analogous to a variance partitioning of environmental and spatial variables \citep{Gilbert2004a} that decouples neutral and niche processes into components of distance and environment. The advantage of our framework is that each term in the model represents a particular process and through model selection, one can identify which combination of processes better explain species abundance. Therefore, linear mixed-effect models provide a straightforward way to translate hypotheses on the effects of environmental filtering, drift, and dispersal on species abundances in competing statistical models. Information indexes like AIC can then be used to express the support provided by data to each model \citep{Burham2002, Johnson2004}. The simultaneous comparison of competing models that map to alternative hypotheses grounded in the theory is the 'golden standard' of model-based inference \citep{Hilborn1997} and a much-needed improvement to phenomenological 'curve-fitting' to SADs \citep{Mcgill2003}. Although we have applied our modeling approach to a specific data set, it comprises a general tool to disentangle selection and drift effects in any given community. 
 
 
-\subsection*{Concluding remarks}
-
-We proposed a mechanism that explains species abundances in the community combining selection and drift-based approaches. Hence, we simply refined the scope of neutral processes affecting species abundances with the concepts of Emergent Groups and limited dispersal. In this context, one promising question to be answered is how ecological traits that define Emergent Groups at a particular community
+ \subsection*{Concluding remarks}
+ % PI 17 dez 2020: WIP, correto? De qq forma acho que depois que fecharmos as 3 seções esta qui vem naturalmente, como uma síntese. E talvez nem seja necessári a esta seção. A ver
+We proposed %a mechanism that explains
+description of species abundances in the community as combination of selection and drift.
+% Hence, we simply refined the scope of neutral processes affecting species abundances with the concepts of Emergent Groups and limited dispersal. % PI 17 dez 2020: acho que náo precisa e soa meio auto-depreciativo
+In this context, one promising question to be answered is how ecological traits that define Emergent Groups at a particular community
 evolved and how phylogenetic relatedness of species affects the definition of the Emergent Groups. Placing Emergent Groups in an evolutionary context may help understand integration levels of niche
-and neutral processes in community assembly.
+and neutral processes in community assembly. % PI 17 dez 2020: este parágrafo me parece um bom último parágrafo, por indicar direções futuras
 
 % Conclusions
 Rebuilding SADs from abundances predicted by our linear mixed model allowed us to understand how aspects of the biology of the study system can influence community patterns. We identified that core and occasional species behave differently because for core species we still detect the importance of tradeoffs on strategies at the environmental gradient. Among species with the same strategy, we show that
-neutral drift and limited dispersal also explain differences in abundances. 
-We proposed a mechanism that explains species abundances in the community reconciling selection and drift approaches in the context of mixed models that can rebuild a SAD for the metacommunity. Hence, we simply refined the scope of drift dynamics affecting species abundances in the context of emergent groups and limited dispersal. Although we have applied our modeling approach to a specific data set, it comprises a general tool to disentangle selection and drift effects in any given community. 
+neutral drift and limited dispersal also explain differences in abundances.
+% PI 17 dez 2020: isto me parece mais próximo de sentenças de abertura da discussão
+We proposed a mechanism that %explains
+describes
+species abundances in the community reconciling selection and drift approaches in the context of mixed models that can rebuild a SAD for the metacommunity. Hence, we simply refined the scope of drift dynamics affecting species abundances in the context of emergent groups and limited dispersal. Although we have applied our modeling approach to a specific data set, it comprises a general tool to disentangle selection and drift effects in any given community. 
 
 
 
-\section*{Acknoledgments} 
+\section*{Acknowledgments} 
 Authors acknowledge Fundação O Boticário para Proteção da Natureza for facilitating the data collection. SM thanks CAPES DS for financial support. Authors thanks Eduardo Santos and Luis Schiezari for insightful comments on previous versions of this manuscript. SM thanks to Brian McGill, Xiao Xiao and Sarah Supp for valuable discussions on the ideas presented in this manuscript.
 
 \section*{Authors' Contributions} 
@@ -480,6 +590,7 @@ SM, AAO and PIP performed conceptual modeling work, SM performed statistical ana
 
 \section*{Data accessibility} 
 All authors have agreed in putting data used in the manuscript available on Dryad.
+% PI 17 dez 2020: não vai tb disponibilizar os códigos? Daí terai que indicar nos métodos ou aqui o repo
 
 \bibliography{references}
 \bibliographystyle{besjournals}
@@ -602,7 +713,9 @@ Random effects & Random effects & Random effects \\
  \begin{center}
 \includegraphics[scale=.75]{./fig/rad_metacommunity.pdf}
 \end{center}
-\caption{Mean SAD of the metacommunity showing core and occasional species in a Brazilian Atlantic Rainforest of Paran\'a State. Core species are assembled by a combination of niche and neutral dynamics and occasional species are assembled by a purely neutral dynamic. Dots represent abundance mean across sites and bars represent abundance standard deviation. Grey area represent predicted values from the models. The numbers indicate six example species shown in Figure \ref{fig:spp}.}\label{fig:rad} %An example of a core species, \emph{Polybotrya cylindrica} (Dryopteridaceae) that is affected by correlation of environment and traits across the altitudinal gradient (B). An example of a occasional species \emph{Trichomanes polypodioides} (Hymenophyllaceae) in which its abundance vary independent of its traits and the environmental gradient (C). \label{fig:rad}}
+\caption{Mean SAD of the metacommunity showing core and occasional species in a Brazilian Atlantic Rainforest of Paran\'a State.
+  Core species are assembled by a combination of niche and neutral dynamics and occasional species are assembled by a purely neutral dynamic. % PI 17 dez 2020: Esta setença me parece uma interpretação, será que vale manter na legenda de uma figura?
+  Dots represent abundance mean across sites and bars represent abundance standard deviation. Grey area represent predicted values from the models. The numbers indicate six example species shown in Figure \ref{fig:spp}.}\label{fig:rad} %An example of a core species, \emph{Polybotrya cylindrica} (Dryopteridaceae) that is affected by correlation of environment and traits across the altitudinal gradient (B). An example of a occasional species \emph{Trichomanes polypodioides} (Hymenophyllaceae) in which its abundance vary independent of its traits and the environmental gradient (C). \label{fig:rad}}
 \end{figure}
 
 
@@ -610,7 +723,7 @@ Random effects & Random effects & Random effects \\
  \begin{center}
 \includegraphics[scale=.75]{./fig/core_ocasional_species.pdf}
 \end{center}
-\caption{Example of three core and three occasional species response across the environmental gradient. The position of each species in the rank is indicated in Figure \ref{fig:spp}. Dots represent the observed abundance value and the lines represent the fit of the best model. Core and occasional species in the same column share the same ecological strategy. Core species (A-C) exhibit a response to the environmental gradient with similar abundance values at a particular altitude. Occasional species (D-F) exhibit different response to the gradient depending on the region.} \label{fig:spp}
+\caption{Example of three core and three occasional species response across the environmental gradient. The position of each species in the rank is indicated in Figure \ref{fig:spp}. Dots represent the observed abundance value and the lines represent expected abundance by the best model. Core and occasional species in the same column share the same ecological strategy. Core species (A-C) exhibit a response to the environmental gradient with similar abundance values at a particular altitude. Occasional species (D-F) exhibit different response to the gradient depending on the region.} \label{fig:spp}
 \end{figure}
 
 
